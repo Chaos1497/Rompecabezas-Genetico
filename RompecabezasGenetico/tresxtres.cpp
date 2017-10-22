@@ -104,14 +104,14 @@ int sobreescribirIMG3(Mat laWea){
     Mat ocho = imread("miniatura8.jpg",1);
     Mat nueve = imread("miniatura9.jpg",1);
     while(true){
-        JoinTresportres(laWea,cuatro,416,320);
-        JoinTresportres2(laWea,uno,213,320);
+        JoinTresportres(laWea,ocho,427,320);
+        JoinTresportres2(laWea,uno,214,320);
         JoinTresportres3(laWea,dos,0,320);
-        JoinTresportres4(laWea,tres,416,160);
-        JoinTresportres5(laWea,cinco,213,160);
+        JoinTresportres4(laWea,tres,427,160);
+        JoinTresportres5(laWea,cinco,214,160);
         JoinTresportres6(laWea,nueve,0,160);
-        JoinTresportres7(laWea,seis,416,0);
-        JoinTresportres8(laWea,ocho,213,0);
+        JoinTresportres7(laWea,seis,427,0);
+        JoinTresportres8(laWea,cuatro,214,0);
         JoinTresportres9(laWea,siete,0,0);
         break;
     }
@@ -125,7 +125,7 @@ int sobreescribirIMG3(Mat laWea){
 
 void tresportres9(Mat laWea10){
     for(int y=320 ; y<=480; y+=160){
-        for(int x=416; x<=640; x+=213){
+        for(int x=427; x<=640; x+=213){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 9);
             Mat miniatura = CropTresportres(laWea10, x, y, 213, 160, nombre);
@@ -136,7 +136,7 @@ void tresportres9(Mat laWea10){
 
 void tresportres8(Mat laWea9){
     for(int y=320 ; y<=480; y+=160){
-        for(int x=213; x<=640; x+=213){
+        for(int x=214; x<=640; x+=213){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 8);
             Mat miniatura = CropTresportres(laWea9, x, y, 213, 160, nombre);
@@ -164,7 +164,7 @@ void tresportres7(Mat laWea8){
 
 void tresportres6(Mat laWea7){
     for(int y=160 ; y<=480; y+=160){
-        for(int x=416; x<=640; x+=213){
+        for(int x=427; x<=640; x+=213){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 6);
             Mat miniatura = CropTresportres(laWea7, x, y, 213, 160, nombre);
@@ -175,7 +175,7 @@ void tresportres6(Mat laWea7){
 
 void tresportres5(Mat laWea6){
     for(int y=160 ; y<=480; y+=160){
-        for(int x=213; x<=640; x+=213){
+        for(int x=214; x<=640; x+=213){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 5);
             Mat miniatura = CropTresportres(laWea6, x, y, 213, 160, nombre);
@@ -203,7 +203,7 @@ void tresportres4(Mat laWea5){
 
 void tresportres3(Mat laWea4){
     for(int y=0 ; y<=480; y+=160){
-        for(int x=416; x<=640; x+=213){
+        for(int x=427; x<=640; x+=213){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 3);
             Mat miniatura = CropTresportres(laWea4, x, y, 213, 160, nombre);
@@ -214,7 +214,7 @@ void tresportres3(Mat laWea4){
 
 void tresportres2(Mat laWea3){
     for(int y=0 ; y<=480; y+=160){
-        for(int x=213; x<=640; x+=213) {
+        for(int x=214; x<=640; x+=213) {
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 2);
             Mat miniatura = CropTresportres(laWea3, x, y, 213, 160, nombre);
