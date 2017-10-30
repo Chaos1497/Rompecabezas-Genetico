@@ -29,7 +29,7 @@ TARGET_LINK_LIBRARIES(RompecabezasGenetico  allegro_acodec
         allegro_font
         allegro)
 
-set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake_modules" ${CMAKE_MODULE_PATH})
+set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/Images" ${CMAKE_MODULE_PATH})
 find_package(SFML 2.3.2 REQUIRED system graphics window network audio)
 if(SFML_FOUND)
     include_directories(${SFML_INCLUDE_DIR})

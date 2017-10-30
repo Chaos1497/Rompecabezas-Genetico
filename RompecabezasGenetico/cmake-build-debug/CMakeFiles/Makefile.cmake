@@ -8,10 +8,10 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "../CMakeLists.txt"
+  "../Images/FindSFML.cmake"
   "CMakeFiles/3.8.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.8.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.8.2/CMakeSystem.cmake"
-  "../cmake_modules/FindSFML.cmake"
   "/home/esteban/clion-2017.1.3/bin/cmake/share/cmake-3.8/Modules/CMakeCInformation.cmake"
   "/home/esteban/clion-2017.1.3/bin/cmake/share/cmake-3.8/Modules/CMakeCXXInformation.cmake"
   "/home/esteban/clion-2017.1.3/bin/cmake/share/cmake-3.8/Modules/CMakeCommonLanguageInclude.cmake"

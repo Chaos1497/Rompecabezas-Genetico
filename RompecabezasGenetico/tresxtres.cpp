@@ -9,90 +9,56 @@ using namespace std;
 
 /*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-
 Mat CropTresportres(Mat image, int x, int y, int width, int height, char *name){
     Mat _roi(image, Rect(x, y, width, height));
     Mat cropped_img;
     _roi.copyTo(cropped_img);
     imwrite(name, cropped_img);
-    //imshow("Cortada",cropped_img);
     imshow("Original",image);
     return cropped_img;
 }
 
 void JoinTresportres(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa",m_image);
-    //imshow("Pullita",s_image);
     imwrite("Escrita.jpg",m_image);
-    //waitKey(0);
 }
 void JoinTresportres2(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa2",m_image);
-    //imshow("Pullita2",s_image);
     imwrite("Escrita2.jpg",m_image);
-    //waitKey(0);
 }
 void JoinTresportres3(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa3",m_image);
-    //imshow("Pullita3",s_image);
     imwrite("Escrita3.jpg",m_image);
-    //waitKey(0);
 }
 void JoinTresportres4(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa4",m_image);
-    //imshow("Pullita4",s_image);
     imwrite("Escrita4.jpg",m_image);
-    //waitKey(0);
 }
 void JoinTresportres5(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa5",m_image);
-    //imshow("Pullita5",s_image);
     imwrite("Escrita5.jpg",m_image);
-    //waitKey(0);
 }
 void JoinTresportres6(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa6",m_image);
-    //imshow("Pullita6",s_image);
     imwrite("Escrita6.jpg",m_image);
-    //waitKey(0);
 }
 void JoinTresportres7(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa7",m_image);
-    //imshow("Pullita7",s_image);
     imwrite("Escrita7.jpg",m_image);
-    //waitKey(0);
 }
 void JoinTresportres8(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa8",m_image);
-    //imshow("Pullita8",s_image);
     imwrite("Escrita8.jpg",m_image);
-    //waitKey(0);
 }
 void JoinTresportres9(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
     imshow("Completa9",m_image);
-    //imshow("Pullita9",s_image);
     imwrite("Escrita9.jpg",m_image);
     waitKey(0);
 }
 
 /*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-
 int sobreescribirIMG3(Mat laWea){
     Mat uno = imread("miniatura1.jpg",1);
     Mat dos = imread("miniatura2.jpg",1);
@@ -119,10 +85,6 @@ int sobreescribirIMG3(Mat laWea){
 
 /*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-
 void tresportres9(Mat laWea10){
     for(int y=320 ; y<=480; y+=160){
         for(int x=427; x<=640; x+=213){
@@ -133,7 +95,6 @@ void tresportres9(Mat laWea10){
         }
     }
 }
-
 void tresportres8(Mat laWea9){
     for(int y=320 ; y<=480; y+=160){
         for(int x=214; x<=640; x+=213){
@@ -144,7 +105,6 @@ void tresportres8(Mat laWea9){
         }
     }
 }
-
 void tresportres7(Mat laWea8){
     for(int y=320 ; y<=480; y+=160){
         for(int x=0; x<=640; x+=213) {
@@ -158,10 +118,6 @@ void tresportres7(Mat laWea8){
 
 /*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-
 void tresportres6(Mat laWea7){
     for(int y=160 ; y<=480; y+=160){
         for(int x=427; x<=640; x+=213){
@@ -172,7 +128,6 @@ void tresportres6(Mat laWea7){
         }
     }
 }
-
 void tresportres5(Mat laWea6){
     for(int y=160 ; y<=480; y+=160){
         for(int x=214; x<=640; x+=213){
@@ -183,7 +138,6 @@ void tresportres5(Mat laWea6){
         }
     }
 }
-
 void tresportres4(Mat laWea5){
     for(int y=160 ; y<=480; y+=160){
         for(int x=0; x<=640; x+=213){
@@ -197,10 +151,6 @@ void tresportres4(Mat laWea5){
 
 /*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-
 void tresportres3(Mat laWea4){
     for(int y=0 ; y<=480; y+=160){
         for(int x=427; x<=640; x+=213){
@@ -211,7 +161,6 @@ void tresportres3(Mat laWea4){
         }
     }
 }
-
 void tresportres2(Mat laWea3){
     for(int y=0 ; y<=480; y+=160){
         for(int x=214; x<=640; x+=213) {
@@ -222,7 +171,6 @@ void tresportres2(Mat laWea3){
         }
     }
 }
-
 void tresportres1(Mat laWea2){
     for(int y=0 ; y<=480; y+=160){
         for(int x=0; x<=640; x+=213){

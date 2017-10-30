@@ -5,7 +5,7 @@
 		<Option title="RompecabezasGenetico"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\usr\;CMake Files\..\..\..\usr\local\;CMake Files\..\..\..\usr\local\share\;CMake Files\..\..\..\usr\local\share\OpenCV\;CMake Files\cmake_modules\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\usr\;CMake Files\..\..\..\usr\local\;CMake Files\..\..\..\usr\local\share\;CMake Files\..\..\..\usr\local\share\OpenCV\;CMake Files\Images\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/esteban/RompecabezasGenetico/cmake-build-debug"/>
@@ -169,8 +169,8 @@
 		<Unit filename="/home/esteban/RompecabezasGenetico/../../../usr/local/share/OpenCV/OpenCVModules-release.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\usr\local\share\OpenCV\"/>
 		</Unit>
-		<Unit filename="/home/esteban/RompecabezasGenetico/cmake_modules/FindSFML.cmake">
-			<Option virtualFolder="CMake Files\cmake_modules\"/>
+		<Unit filename="/home/esteban/RompecabezasGenetico/Images/FindSFML.cmake">
+			<Option virtualFolder="CMake Files\Images\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

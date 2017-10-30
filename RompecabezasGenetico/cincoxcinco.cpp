@@ -9,203 +9,120 @@ using namespace std;
 
 /*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-
 Mat CropCincoporcinco(Mat image, int x, int y, int width, int height, char *name){
     Mat _roi(image, Rect(x, y, width, height));
     Mat cropped_img;
     _roi.copyTo(cropped_img);
     imwrite(name, cropped_img);
-    //imshow("Cortada",cropped_img);
     imshow("Original",image);
     return cropped_img;
 }
 
 void JoinCincoporcinco(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa",m_image);
-    //imshow("Pullita",s_image);
     imwrite("Escrita.jpg",m_image);
-    //waitKey(0);
 }
-
 void JoinCincoporcinco2(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa2",m_image);
-    //imshow("Pullita2",s_image);
     imwrite("Escrita2.jpg",m_image);
-    //waitKey(0);
 }
 void JoinCincoporcinco3(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa3",m_image);
-    //imshow("Pullita3",s_image);
     imwrite("Escrita3.jpg",m_image);
-    //waitKey(0);
 }
 void JoinCincoporcinco4(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa4",m_image);
-    //imshow("Pullita4",s_image);
     imwrite("Escrita4.jpg",m_image);
-    //waitKey(0);
 }
 void JoinCincoporcinco5(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa5",m_image);
-    //imshow("Pullita5",s_image);
     imwrite("Escrita5.jpg",m_image);
-    //waitKey(0);
 }
 void JoinCincoporcinco6(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa6",m_image);
-    //imshow("Pullita6",s_image);
     imwrite("Escrita6.jpg",m_image);
-    //waitKey(0);
 }
 void JoinCincoporcinco7(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa7",m_image);
-    //imshow("Pullita7",s_image);
     imwrite("Escrita7.jpg",m_image);
-    //waitKey(0);
 }
 void JoinCincoporcinco8(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa8",m_image);
-    //imshow("Pullita8",s_image);
     imwrite("Escrita8.jpg",m_image);
-    //waitKey(0);
 }
 void JoinCincoporcinco9(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa9",m_image);
-    //imshow("Pullita9",s_image);
     imwrite("Escrita9.jpg",m_image);
-    //waitKey(0);
 }
 void JoinCincoporcinco10(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa10",m_image);
-    //imshow("Pullita10",s_image);
     imwrite("Escrita10.jpg",m_image);
-    //waitKey(0);
 }
 void JoinCincoporcinco11(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa11",m_image);
-    //imshow("Pullita11",s_image);
     imwrite("Escrita11.jpg",m_image);
-    //waitKey(0);
 }
 void JoinCincoporcinco12(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa12",m_image);
-    //imshow("Pullita12",s_image);
     imwrite("Escrita12.jpg",m_image);
-    //waitKey(0);
 }
 void JoinCincoporcinco13(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa13",m_image);
-    //imshow("Pullita13",s_image);
     imwrite("Escrita13.jpg",m_image);
-    //waitKey(0);
 }
 void JoinCincoporcinco14(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa14",m_image);
-    //imshow("Pullita14",s_image);
     imwrite("Escrita14.jpg",m_image);
-    //waitKey(0);
 }
 void JoinCincoporcinco15(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa15",m_image);
-    //imshow("Pullita15",s_image);
     imwrite("Escrita15.jpg",m_image);
-    //waitKey(0);
 }
 void JoinCincoporcinco16(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa16",m_image);
-    //imshow("Pullita16",s_image);
     imwrite("Escrita16.jpg",m_image);
-    //waitKey(0);
 }
 void JoinCincoporcinco17(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa17",m_image);
-    //imshow("Pullita17",s_image);
     imwrite("Escrita17.jpg",m_image);
-    //waitKey(0);
 }
 void JoinCincoporcinco18(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa18",m_image);
-    //imshow("Pullita18",s_image);
     imwrite("Escrita18.jpg",m_image);
-    //waitKey(0);
 }
 void JoinCincoporcinco19(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa19",m_image);
-    //imshow("Pullita19",s_image);
     imwrite("Escrita19.jpg",m_image);
-    //waitKey(0);
 }
 void JoinCincoporcinco20(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa20",m_image);
-    //imshow("Pullita20",s_image);
     imwrite("Escrita20.jpg",m_image);
-    //waitKey(0);
 }
 void JoinCincoporcinco21(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa21",m_image);
-    //imshow("Pullita21",s_image);
     imwrite("Escrita21.jpg",m_image);
-    //waitKey(0);
 }
 void JoinCincoporcinco22(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa22",m_image);
-    //imshow("Pullita22",s_image);
     imwrite("Escrita22.jpg",m_image);
-    //waitKey(0);
 }
 void JoinCincoporcinco23(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa23",m_image);
-    //imshow("Pullita23",s_image);
     imwrite("Escrita23.jpg",m_image);
-    //waitKey(0);
 }
 void JoinCincoporcinco24(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
-    //imshow("Completa24",m_image);
-    //imshow("Pullita24",s_image);
     imwrite("Escrita24.jpg",m_image);
-    //waitKey(0);
 }
 void JoinCincoporcinco25(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
     imshow("Completa25",m_image);
-    //imshow("Pullita25",s_image);
     imwrite("Escrita25.jpg",m_image);
     waitKey(0);
 }
 
 /*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-
 int sobreescribirIMG5(Mat laWea){
     Mat uno = imread("miniatura1.jpg",1);
     Mat dos = imread("miniatura2.jpg",1);
@@ -262,10 +179,6 @@ int sobreescribirIMG5(Mat laWea){
     }
 }
 
-
-/*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
 void cincoporcinco25(Mat laWea26){
@@ -279,7 +192,6 @@ void cincoporcinco25(Mat laWea26){
         }
     }
 }
-
 void cincoporcinco24(Mat laWea25){
     for(int y=384 ; y<=480; y+=96){
         for(int x=385; x<=640; x+=128){
@@ -290,7 +202,6 @@ void cincoporcinco24(Mat laWea25){
         }
     }
 }
-
 void cincoporcinco23(Mat laWea24){
     for(int y=384 ; y<=480; y+=96){
         for(int x=257; x<=640; x+=128){
@@ -301,7 +212,6 @@ void cincoporcinco23(Mat laWea24){
         }
     }
 }
-
 void cincoporcinco22(Mat laWea23){
     for(int y=384 ; y<=480; y+=96){
         for(int x=129; x<=640; x+=128) {
@@ -312,7 +222,6 @@ void cincoporcinco22(Mat laWea23){
         }
     }
 }
-
 void cincoporcinco21(Mat laWea22){
     for(int y=384 ; y<=480; y+=96){
         for(int x=0; x<=640; x+=128){
@@ -326,9 +235,6 @@ void cincoporcinco21(Mat laWea22){
 
 /*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
 void cincoporcinco20(Mat laWea21){
     for(int y=288 ; y<=480; y+=96){
         for(int x=512; x<=640; x+=128){
@@ -339,7 +245,6 @@ void cincoporcinco20(Mat laWea21){
         }
     }
 }
-
 void cincoporcinco19(Mat laWea20){
     for(int y=288 ; y<=480; y+=96){
         for(int x=385; x<=640; x+=128){
@@ -350,7 +255,6 @@ void cincoporcinco19(Mat laWea20){
         }
     }
 }
-
 void cincoporcinco18(Mat laWea19){
     for(int y=288 ; y<=480; y+=96){
         for(int x=257; x<=640; x+=128){
@@ -361,7 +265,6 @@ void cincoporcinco18(Mat laWea19){
         }
     }
 }
-
 void cincoporcinco17(Mat laWea18){
     for(int y=288 ; y<=480; y+=96){
         for(int x=129; x<=640; x+=128) {
@@ -372,7 +275,6 @@ void cincoporcinco17(Mat laWea18){
         }
     }
 }
-
 void cincoporcinco16(Mat laWea17){
     for(int y=288 ; y<=480; y+=96){
         for(int x=0; x<=640; x+=128){
@@ -386,9 +288,6 @@ void cincoporcinco16(Mat laWea17){
 
 /*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
 void cincoporcinco15(Mat laWea16){
     for(int y=192 ; y<=480; y+=96){
         for(int x=512; x<=640; x+=128){
@@ -399,7 +298,6 @@ void cincoporcinco15(Mat laWea16){
         }
     }
 }
-
 void cincoporcinco14(Mat laWea15){
     for(int y=192 ; y<=480; y+=96){
         for(int x=385; x<=640; x+=128){
@@ -410,7 +308,6 @@ void cincoporcinco14(Mat laWea15){
         }
     }
 }
-
 void cincoporcinco13(Mat laWea14){
     for(int y=192 ; y<=480; y+=96){
         for(int x=257; x<=640; x+=128){
@@ -421,7 +318,6 @@ void cincoporcinco13(Mat laWea14){
         }
     }
 }
-
 void cincoporcinco12(Mat laWea13){
     for(int y=192 ; y<=480; y+=96){
         for(int x=129; x<=640; x+=128) {
@@ -432,7 +328,6 @@ void cincoporcinco12(Mat laWea13){
         }
     }
 }
-
 void cincoporcinco11(Mat laWea12){
     for(int y=192 ; y<=480; y+=96){
         for(int x=0; x<=640; x+=128){
@@ -446,9 +341,6 @@ void cincoporcinco11(Mat laWea12){
 
 /*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
 void cincoporcinco10(Mat laWea11){
     for(int y=96 ; y<=480; y+=96){
         for(int x=512; x<=640; x+=128){
@@ -459,7 +351,6 @@ void cincoporcinco10(Mat laWea11){
         }
     }
 }
-
 void cincoporcinco9(Mat laWea10){
     for(int y=96 ; y<=480; y+=96){
         for(int x=385; x<=640; x+=128){
@@ -470,7 +361,6 @@ void cincoporcinco9(Mat laWea10){
         }
     }
 }
-
 void cincoporcinco8(Mat laWea9){
     for(int y=96 ; y<=480; y+=96){
         for(int x=257; x<=640; x+=128){
@@ -481,7 +371,6 @@ void cincoporcinco8(Mat laWea9){
         }
     }
 }
-
 void cincoporcinco7(Mat laWea8){
     for(int y=96 ; y<=480; y+=96){
         for(int x=129; x<=640; x+=128) {
@@ -492,7 +381,6 @@ void cincoporcinco7(Mat laWea8){
         }
     }
 }
-
 void cincoporcinco6(Mat laWea7){
     for(int y=96 ; y<=480; y+=96){
         for(int x=0; x<=640; x+=128){
@@ -506,9 +394,6 @@ void cincoporcinco6(Mat laWea7){
 
 /*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
 void cincoporcinco5(Mat laWea6){
     for(int y=0 ; y<=480; y+=96){
         for(int x=512; x<=640; x+=128){
@@ -519,7 +404,6 @@ void cincoporcinco5(Mat laWea6){
         }
     }
 }
-
 void cincoporcinco4(Mat laWea5){
     for(int y=0 ; y<=480; y+=96){
         for(int x=385; x<=640; x+=128){
@@ -530,7 +414,6 @@ void cincoporcinco4(Mat laWea5){
         }
     }
 }
-
 void cincoporcinco3(Mat laWea4){
     for(int y=0 ; y<=480; y+=96){
         for(int x=257; x<=640; x+=128){
@@ -541,7 +424,6 @@ void cincoporcinco3(Mat laWea4){
         }
     }
 }
-
 void cincoporcinco2(Mat laWea3){
     for(int y=0 ; y<=480; y+=96){
         for(int x=129; x<=640; x+=128) {
@@ -552,7 +434,6 @@ void cincoporcinco2(Mat laWea3){
         }
     }
 }
-
 void cincoporcinco1(Mat laWea2){
     for(int y=0 ; y<=480; y+=96){
         for(int x=0; x<=640; x+=128){
