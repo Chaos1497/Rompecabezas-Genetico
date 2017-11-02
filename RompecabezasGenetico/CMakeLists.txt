@@ -3,7 +3,7 @@ project(RompecabezasGenetico)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp dosxdos.cpp cincoxcinco.cpp cuatroxcuatro.cpp tresxtres.cpp Individuos_manejador.h Individuos_estructura.h Genetic.h Poblacion.h Mutacion.h)
+set(SOURCE_FILES main.cpp dosxdos.cpp cincoxcinco.cpp cuatroxcuatro.cpp tresxtres.cpp Individuos_manejador.h Individuos_estructura.h Genetic.h Poblacion.h)
 add_executable(RompecabezasGenetico ${SOURCE_FILES} Individuos_manejador.h)
 
 

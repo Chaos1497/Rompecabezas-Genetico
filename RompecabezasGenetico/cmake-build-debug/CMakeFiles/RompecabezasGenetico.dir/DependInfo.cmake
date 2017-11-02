@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/esteban/Escritorio/RompecabezasGenetico/cincoxcinco.cpp" "/home/esteban/Escritorio/RompecabezasGenetico/cmake-build-debug/CMakeFiles/RompecabezasGenetico.dir/cincoxcinco.cpp.o"
-  "/home/esteban/Escritorio/RompecabezasGenetico/cuatroxcuatro.cpp" "/home/esteban/Escritorio/RompecabezasGenetico/cmake-build-debug/CMakeFiles/RompecabezasGenetico.dir/cuatroxcuatro.cpp.o"
-  "/home/esteban/Escritorio/RompecabezasGenetico/dosxdos.cpp" "/home/esteban/Escritorio/RompecabezasGenetico/cmake-build-debug/CMakeFiles/RompecabezasGenetico.dir/dosxdos.cpp.o"
-  "/home/esteban/Escritorio/RompecabezasGenetico/main.cpp" "/home/esteban/Escritorio/RompecabezasGenetico/cmake-build-debug/CMakeFiles/RompecabezasGenetico.dir/main.cpp.o"
-  "/home/esteban/Escritorio/RompecabezasGenetico/tresxtres.cpp" "/home/esteban/Escritorio/RompecabezasGenetico/cmake-build-debug/CMakeFiles/RompecabezasGenetico.dir/tresxtres.cpp.o"
+  "/home/esteban/RompecabezasGenetico/cincoxcinco.cpp" "/home/esteban/RompecabezasGenetico/cmake-build-debug/CMakeFiles/RompecabezasGenetico.dir/cincoxcinco.cpp.o"
+  "/home/esteban/RompecabezasGenetico/cuatroxcuatro.cpp" "/home/esteban/RompecabezasGenetico/cmake-build-debug/CMakeFiles/RompecabezasGenetico.dir/cuatroxcuatro.cpp.o"
+  "/home/esteban/RompecabezasGenetico/dosxdos.cpp" "/home/esteban/RompecabezasGenetico/cmake-build-debug/CMakeFiles/RompecabezasGenetico.dir/dosxdos.cpp.o"
+  "/home/esteban/RompecabezasGenetico/main.cpp" "/home/esteban/RompecabezasGenetico/cmake-build-debug/CMakeFiles/RompecabezasGenetico.dir/main.cpp.o"
+  "/home/esteban/RompecabezasGenetico/tresxtres.cpp" "/home/esteban/RompecabezasGenetico/cmake-build-debug/CMakeFiles/RompecabezasGenetico.dir/tresxtres.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

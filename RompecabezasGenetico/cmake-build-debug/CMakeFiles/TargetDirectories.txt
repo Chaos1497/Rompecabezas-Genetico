@@ -1,4 +1,4 @@
-/home/esteban/Escritorio/RompecabezasGenetico/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/esteban/Escritorio/RompecabezasGenetico/cmake-build-debug/CMakeFiles/main.dir
-/home/esteban/Escritorio/RompecabezasGenetico/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/esteban/Escritorio/RompecabezasGenetico/cmake-build-debug/CMakeFiles/RompecabezasGenetico.dir
+/home/esteban/RompecabezasGenetico/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/esteban/RompecabezasGenetico/cmake-build-debug/CMakeFiles/main.dir
+/home/esteban/RompecabezasGenetico/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/esteban/RompecabezasGenetico/cmake-build-debug/CMakeFiles/RompecabezasGenetico.dir

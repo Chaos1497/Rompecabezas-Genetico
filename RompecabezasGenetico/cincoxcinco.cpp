@@ -1440,33 +1440,33 @@ void mostrar5(Tlista TT){
 
 /*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
-int sobreescribirIMG5(Mat laWea){
-    uno5 = imread("miniatura1.jpg",1);
-    dos5 = imread("miniatura2.jpg",1);
-    tres5 = imread("miniatura3.jpg",1);
-    cuatro5 = imread("miniatura4.jpg",1);
-    cinco5 = imread("miniatura5.jpg",1);
-    seis5 = imread("miniatura6.jpg",1);
-    siete5 = imread("miniatura7.jpg",1);
-    ocho5 = imread("miniatura8.jpg",1);
-    nueve5 = imread("miniatura9.jpg",1);
-    diez5 = imread("miniatura10.jpg",1);
-    once5 = imread("miniatura11.jpg",1);
-    doce5 = imread("miniatura12.jpg",1);
-    trece5 = imread("miniatura13.jpg",1);
-    catorce5 = imread("miniatura14.jpg",1);
-    quince5 = imread("miniatura15.jpg",1);
-    dieciseis5 = imread("miniatura16.jpg",1);
-    diecisiete5 = imread("miniatura17.jpg",1);
-    dieciocho5 = imread("miniatura18.jpg",1);
-    diecinueve5 = imread("miniatura19.jpg",1);
-    veinte5 = imread("miniatura20.jpg",1);
-    veintiuno5 = imread("miniatura21.jpg",1);
-    veintidos5 = imread("miniatura22.jpg",1);
-    veintitres5 = imread("miniatura23.jpg",1);
-    veinticuatro5 = imread("miniatura24.jpg",1);
-    veinticinco5 = imread("miniatura25.jpg",1);
-    LW5=laWea;
+int sobreescribirIMG5(Mat laWea) {
+    uno5 = imread("miniatura25.jpg", 1);
+    dos5 = imread("miniatura24.jpg", 1);
+    tres5 = imread("miniatura23.jpg", 1);
+    cuatro5 = imread("miniatura22.jpg", 1);
+    cinco5 = imread("miniatura21.jpg", 1);
+    seis5 = imread("miniatura20.jpg", 1);
+    siete5 = imread("miniatura19.jpg", 1);
+    ocho5 = imread("miniatura18.jpg", 1);
+    nueve5 = imread("miniatura17.jpg", 1);
+    diez5 = imread("miniatura16.jpg", 1);
+    once5 = imread("miniatura15.jpg", 1);
+    doce5 = imread("miniatura14.jpg", 1);
+    trece5 = imread("miniatura13.jpg", 1);
+    catorce5 = imread("miniatura12.jpg", 1);
+    quince5 = imread("miniatura11.jpg", 1);
+    dieciseis5 = imread("miniatura10.jpg", 1);
+    diecisiete5 = imread("miniatura9.jpg", 1);
+    dieciocho5 = imread("miniatura8.jpg", 1);
+    diecinueve5 = imread("miniatura7.jpg", 1);
+    veinte5 = imread("miniatura6.jpg", 1);
+    veintiuno5 = imread("miniatura5.jpg", 1);
+    veintidos5 = imread("miniatura4.jpg", 1);
+    veintitres5 = imread("miniatura3.jpg", 1);
+    veinticuatro5 = imread("miniatura2.jpg", 1);
+    veinticinco5 = imread("miniatura1.jpg", 1);
+    LW5 = laWea;
     int gen=0;
     Poblacion M2=Muestra;
     int fin=0;
@@ -1500,37 +1500,6 @@ int sobreescribirIMG5(Mat laWea){
 
     }
 }
-
-/*    while(true){
-        Join5(laWea,veinticinco5,512,384);
-        Join52(laWea,veinticuatro5,385,384);
-        Join53(laWea,veintitres5,257,384);
-        Join54(laWea,veintidos5,129,384);
-        Join55(laWea,veintiuno5,0,384);
-        Join56(laWea,veinte5,512,288);
-        Join57(laWea,diecinueve5,385,288);
-        Join58(laWea,dieciocho5,257,288);
-        Join59(laWea,diecisiete5,129,288);
-        Join510(laWea,dieciseis5,0,288);
-        Join511(laWea,quince5,512,192);
-        Join512(laWea,catorce5,385,192);
-        Join513(laWea,trece5,257,192);
-        Join514(laWea,doce5,129,192);
-        Join515(laWea,once5,0,192);
-        Join516(laWea,diez5,512,96);
-        Join517(laWea,nueve5,385,96);
-        Join518(laWea,ocho5,257,96);
-        Join519(laWea,siete5,129,96);
-        Join520(laWea,seis5,0,96);
-        Join521(laWea,cinco5,512,0);
-        Join522(laWea,cuatro5,385,0);
-        Join523(laWea,tres5,257,0);
-        Join524(laWea,dos5,129,0);
-        Join525(laWea,uno5,0,0);
-        break;
-    }
-}*/
-
 /*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
 void cincoporcinco25(Mat laWea26){
