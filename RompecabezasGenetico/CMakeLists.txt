@@ -3,8 +3,9 @@ project(RompecabezasGenetico)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp cincoxcinco.cpp cuatroxcuatro.cpp tresxtres.cpp dosxdos.cpp)
-add_executable(RompecabezasGenetico ${SOURCE_FILES})
+set(SOURCE_FILES main.cpp dosxdos.cpp cincoxcinco.cpp cuatroxcuatro.cpp tresxtres.cpp Individuos_manejador.h Individuos_estructura.h Genetic.h Poblacion.h Mutacion.h)
+add_executable(RompecabezasGenetico ${SOURCE_FILES} Individuos_manejador.h)
+
 
 FIND_PACKAGE( OpenCV REQUIRED )
 ADD_EXECUTABLE( main main )
@@ -29,9 +30,9 @@ TARGET_LINK_LIBRARIES(RompecabezasGenetico  allegro_acodec
         allegro_font
         allegro)
 
-set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/Images" ${CMAKE_MODULE_PATH})
-find_package(SFML 2.3.2 REQUIRED system graphics window network audio)
-if(SFML_FOUND)
-    include_directories(${SFML_INCLUDE_DIR})
-    target_link_libraries(${PROJECT_NAME} ${SFML_LIBRARIES})
-endif()
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
+include_directories(${GTK3_INCLUDE_DIRS})
+link_directories(${GTK3_LIBRARY_DIRS})
+add_definitions(${GTK3_CFLAGS_OTHER})
+target_link_libraries(RompecabezasGenetico ${GTK3_LIBRARIES})

@@ -1,11 +1,16 @@
 #include <stdio.h>
 #include "cv.h"
 #include "highgui.h"
+#include "Individuos_estructura.h"
+#include "Genetic.h"
 #include <opencv2/highgui/highgui.hpp>
 #include <iostream>
 
 using namespace cv;
 using namespace std;
+Mat uno3,dos3,tres3,cuatro3,cinco3,seis3,siete3,ocho3,nueve3,LW3;
+
+
 
 /*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
@@ -54,32 +59,262 @@ void JoinTresportres9(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
     imshow("Completa9",m_image);
     imwrite("Escrita9.jpg",m_image);
-    waitKey(0);
+    waitKey(2000);
+}
+
+void mostrar3(Tlista TT){
+    int pos=0;
+    while(TT!=NULL){
+        if(pos==0){
+            if(TT->nro==0){
+                JoinTresportres(LW3,uno3,0,0);
+            }else if(TT->nro==1){
+                JoinTresportres(LW3,dos3,0,0);
+            }else if(TT->nro==2){
+                JoinTresportres(LW3,tres3,0,0);
+            }else if(TT->nro==3){
+                JoinTresportres(LW3,cuatro3,0,0);
+            }else if(TT->nro==4){
+                JoinTresportres(LW3,cinco3,0,0);
+            }else if(TT->nro==5){
+                JoinTresportres(LW3,seis3,0,0);
+            }else if(TT->nro==6){
+                JoinTresportres(LW3,siete3,0,0);
+            }else if(TT->nro==7){
+                JoinTresportres(LW3,ocho3,0,0);
+            }else if(TT->nro==8){
+                JoinTresportres(LW3,nueve3,0,0);
+            }
+        } else if(pos==1){
+            if(TT->nro==0){
+                JoinTresportres2(LW3,uno3,214,0);
+            }else if(TT->nro==1){
+                JoinTresportres2(LW3,dos3,214,0);
+            }else if(TT->nro==2){
+                JoinTresportres2(LW3,tres3,214,0);
+            }else if(TT->nro==3){
+                JoinTresportres2(LW3,cuatro3,214,0);
+            }else if(TT->nro==4){
+                JoinTresportres2(LW3,cinco3,214,0);
+            }else if(TT->nro==5){
+                JoinTresportres2(LW3,seis3,214,0);
+            }else if(TT->nro==6){
+                JoinTresportres2(LW3,siete3,214,0);
+            }else if(TT->nro==7){
+                JoinTresportres2(LW3,ocho3,214,0);
+            }else if(TT->nro==8){
+                JoinTresportres2(LW3,nueve3,214,0);
+            }
+        } else if(pos==2){
+            if(TT->nro==0){
+                JoinTresportres3(LW3,uno3,427,0);
+            }else if(TT->nro==1){
+                JoinTresportres3(LW3,dos3,427,0);
+            }else if(TT->nro==2){
+                JoinTresportres3(LW3,tres3,427,0);
+            }else if(TT->nro==3){
+                JoinTresportres3(LW3,cuatro3,427,0);
+            }else if(TT->nro==4){
+                JoinTresportres3(LW3,cinco3,427,0);
+            }else if(TT->nro==5){
+                JoinTresportres3(LW3,seis3,427,0);
+            }else if(TT->nro==6){
+                JoinTresportres3(LW3,siete3,427,0);
+            }else if(TT->nro==7){
+                JoinTresportres3(LW3,ocho3,427,0);
+            }else if(TT->nro==8){
+                JoinTresportres3(LW3,nueve3,427,0);
+            }
+        }else if(pos==3){
+            if(TT->nro==0){
+                JoinTresportres4(LW3,uno3,0,160);
+            }else if(TT->nro==1){
+                JoinTresportres4(LW3,dos3,0,160);
+            }else if(TT->nro==2){
+                JoinTresportres4(LW3,tres3,0,160);
+            }else if(TT->nro==3){
+                JoinTresportres4(LW3,cuatro3,0,160);
+            }else if(TT->nro==4){
+                JoinTresportres4(LW3,cinco3,0,160);
+            }else if(TT->nro==5){
+                JoinTresportres4(LW3,seis3,0,160);
+            }else if(TT->nro==6){
+                JoinTresportres4(LW3,siete3,0,160);
+            }else if(TT->nro==7){
+                JoinTresportres4(LW3,ocho3,0,160);
+            }else if(TT->nro==8){
+                JoinTresportres4(LW3,nueve3,0,160);
+            }
+        }else if(pos==4){
+            if(TT->nro==0){
+                JoinTresportres5(LW3,uno3,214,160);
+            }else if(TT->nro==1){
+                JoinTresportres5(LW3,dos3,214,160);
+            }else if(TT->nro==2){
+                JoinTresportres5(LW3,tres3,214,160);
+            }else if(TT->nro==3){
+                JoinTresportres5(LW3,cuatro3,214,160);
+            }else if(TT->nro==4){
+                JoinTresportres5(LW3,cinco3,214,160);
+            }else if(TT->nro==5){
+                JoinTresportres5(LW3,seis3,214,160);
+            }else if(TT->nro==6){
+                JoinTresportres5(LW3,siete3,214,160);
+            }else if(TT->nro==7){
+                JoinTresportres5(LW3,ocho3,214,160);
+            }else if(TT->nro==8){
+                JoinTresportres5(LW3,nueve3,214,160);
+            }
+        }else if(pos==5){
+            if(TT->nro==0){
+                JoinTresportres6(LW3,uno3,427,160);
+            }else if(TT->nro==1){
+                JoinTresportres6(LW3,dos3,427,160);
+            }else if(TT->nro==2){
+                JoinTresportres6(LW3,tres3,427,160);
+            }else if(TT->nro==3){
+                JoinTresportres6(LW3,cuatro3,427,160);
+            }else if(TT->nro==4){
+                JoinTresportres6(LW3,cinco3,427,160);
+            }else if(TT->nro==5){
+                JoinTresportres6(LW3,seis3,427,160);
+            }else if(TT->nro==6){
+                JoinTresportres6(LW3,siete3,427,160);
+            }else if(TT->nro==7){
+                JoinTresportres6(LW3,ocho3,427,160);
+            }else if(TT->nro==8){
+                JoinTresportres6(LW3,nueve3,427,160);
+            }
+        }else if(pos==6){
+            if(TT->nro==0){
+                JoinTresportres7(LW3,uno3,0,320);
+            }else if(TT->nro==1){
+                JoinTresportres7(LW3,dos3,0,320);
+            }else if(TT->nro==2){
+                JoinTresportres7(LW3,tres3,0,320);
+            }else if(TT->nro==3){
+                JoinTresportres7(LW3,cuatro3,0,320);
+            }else if(TT->nro==4){
+                JoinTresportres7(LW3,cinco3,0,320);
+            }else if(TT->nro==5){
+                JoinTresportres7(LW3,seis3,0,320);
+            }else if(TT->nro==6){
+                JoinTresportres7(LW3,siete3,0,320);
+            }else if(TT->nro==7){
+                JoinTresportres7(LW3,ocho3,0,320);
+            }else if(TT->nro==8){
+                JoinTresportres7(LW3,nueve3,0,320);
+            }
+        }else if(pos==7){
+            if(TT->nro==0){
+                JoinTresportres8(LW3,uno3,214,320);
+            }else if(TT->nro==1){
+                JoinTresportres8(LW3,dos3,214,320);
+            }else if(TT->nro==2){
+                JoinTresportres8(LW3,tres3,214,320);
+            }else if(TT->nro==3){
+                JoinTresportres8(LW3,cuatro3,214,320);
+            }else if(TT->nro==4){
+                JoinTresportres8(LW3,cinco3,214,320);
+            }else if(TT->nro==5){
+                JoinTresportres8(LW3,seis3,214,320);
+            }else if(TT->nro==6){
+                JoinTresportres8(LW3,siete3,214,320);
+            }else if(TT->nro==7){
+                JoinTresportres8(LW3,ocho3,214,320);
+            }else if(TT->nro==8){
+                JoinTresportres8(LW3,nueve3,214,320);
+            }
+        }else if(pos==8){
+            if(TT->nro==0){
+                JoinTresportres9(LW3,uno3,427,320);
+            }else if(TT->nro==1){
+                JoinTresportres9(LW3,dos3,427,320);
+            }else if(TT->nro==2){
+                JoinTresportres9(LW3,tres3,427,320);
+            }else if(TT->nro==3){
+                JoinTresportres9(LW3,cuatro3,427,320);
+            }else if(TT->nro==4){
+                JoinTresportres9(LW3,cinco3,427,320);
+            }else if(TT->nro==5){
+                JoinTresportres9(LW3,seis3,427,320);
+            }else if(TT->nro==6){
+                JoinTresportres9(LW3,siete3,427,320);
+            }else if(TT->nro==7){
+                JoinTresportres9(LW3,ocho3,427,320);
+            }else if(TT->nro==8){
+                JoinTresportres9(LW3,nueve3,427,320);
+            }
+        }
+        pos+=1;
+        TT=TT->sgte;
+    }
 }
 
 /*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
 int sobreescribirIMG3(Mat laWea){
-    Mat uno = imread("miniatura1.jpg",1);
-    Mat dos = imread("miniatura2.jpg",1);
-    Mat tres = imread("miniatura3.jpg",1);
-    Mat cuatro = imread("miniatura4.jpg",1);
-    Mat cinco = imread("miniatura5.jpg",1);
-    Mat seis = imread("miniatura6.jpg",1);
-    Mat siete = imread("miniatura7.jpg",1);
-    Mat ocho = imread("miniatura8.jpg",1);
-    Mat nueve = imread("miniatura9.jpg",1);
+     uno3 = imread("miniatura1.jpg",1);
+     dos3 = imread("miniatura2.jpg",1);
+     tres3 = imread("miniatura3.jpg",1);
+     cuatro3 = imread("miniatura4.jpg",1);
+     cinco3 = imread("miniatura5.jpg",1);
+     seis3 = imread("miniatura6.jpg",1);
+     siete3 = imread("miniatura7.jpg",1);
+     ocho3 = imread("miniatura8.jpg",1);
+     nueve3 = imread("miniatura9.jpg",1);
+    LW3=laWea;
+    int gen=0;
+    int fin=0;
+
+    /*
     while(true){
-        JoinTresportres(laWea,ocho,427,320);
-        JoinTresportres2(laWea,uno,214,320);
-        JoinTresportres3(laWea,dos,0,320);
-        JoinTresportres4(laWea,tres,427,160);
-        JoinTresportres5(laWea,cinco,214,160);
-        JoinTresportres6(laWea,nueve,0,160);
-        JoinTresportres7(laWea,seis,427,0);
-        JoinTresportres8(laWea,cuatro,214,0);
-        JoinTresportres9(laWea,siete,0,0);
+
+        JoinTresportres(laWea,nueve3,427,320);
+        JoinTresportres2(laWea,ocho3,214,320);
+        JoinTresportres3(laWea,siete3,0,320);
+        JoinTresportres4(laWea,seis3,427,160);
+        JoinTresportres5(laWea,cinco3,214,160);
+        JoinTresportres6(laWea,cuatro3,0,160);
+        JoinTresportres7(laWea,tres3,427,0);
+        JoinTresportres8(laWea,dos3,214,0);
+        JoinTresportres9(laWea,uno3,0,0);
+
+        Tlista AA;
+        insertarFinal(AA,2);
+        insertarFinal(AA,2);
+        insertarFinal(AA,2);
+        insertarFinal(AA,2);
+        insertarFinal(AA,2);
+        insertarFinal(AA,5);
+        insertarFinal(AA,6);
+        insertarFinal(AA,7);
+        insertarFinal(AA,8);
+        insertarFinal(AA,9);
+        mostrar3(AA);
+
+        waitKey(0);
+
         break;
+    }
+    */
+
+    while(Muestra!=NULL){
+        if(Muestra->sgte!=NULL){
+            mostrar3(Muestra->sgte->individuo);
+            waitKey(4000);
+        }
+        if(Muestra->sgte->sgte!=NULL){
+            mostrar3(Muestra->sgte->sgte->individuo);
+            waitKey(4000);
+        }
+        mostrar3(Muestra->individuo);
+        waitKey(4000);
+        Muestra=Muestra->sgte;
+        Muestra=Muestra->sgte;
+        cout<<"GENERACION \n";
+        cout<<gen;
+        gen+=1;
     }
 }
 

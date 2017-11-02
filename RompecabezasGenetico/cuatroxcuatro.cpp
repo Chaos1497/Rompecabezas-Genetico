@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include "cv.h"
 #include "highgui.h"
+#include "Individuos_estructura.h"
 #include <opencv2/highgui/highgui.hpp>
 #include <iostream>
+#include "Genetic.h"
 
 using namespace cv;
 using namespace std;
-
+Mat uno4,dos4,tres4,cuatro4,cinco4,seis4,siete4,ocho4,nueve4,diez4,once4,doce4,trece4,catorce4,quince4,dieciseis4,LW4;
 /*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
 Mat CropCuatroporcuatro(Mat image, int x, int y, int width, int height, char *name){
@@ -18,110 +20,685 @@ Mat CropCuatroporcuatro(Mat image, int x, int y, int width, int height, char *na
     return cropped_img;
 }
 
-void JoinCuatroporcuatro(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
+void Join4(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
     imwrite("Escrita.jpg",m_image);
 }
-void JoinCuatroporcuatro2(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
+void Join42(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
     imwrite("Escrita2.jpg",m_image);
 }
-void JoinCuatroporcuatro3(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
+void Join43(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
     imwrite("Escrita3.jpg",m_image);
 }
-void JoinCuatroporcuatro4(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
+void Join44(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
     imwrite("Escrita4.jpg",m_image);
 }
-void JoinCuatroporcuatro5(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
+void Join45(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
     imwrite("Escrita5.jpg",m_image);
 }
-void JoinCuatroporcuatro6(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
+void Join46(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
     imwrite("Escrita6.jpg",m_image);
 }
-void JoinCuatroporcuatro7(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
+void Join47(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
     imwrite("Escrita7.jpg",m_image);
 }
-void JoinCuatroporcuatro8(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
+void Join48(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
     imwrite("Escrita8.jpg",m_image);
 }
-void JoinCuatroporcuatro9(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
+void Join49(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
     imwrite("Escrita9.jpg",m_image);
 }
-void JoinCuatroporcuatro10(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
+void Join410(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
     imwrite("Escrita10.jpg",m_image);
 }
-void JoinCuatroporcuatro11(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
+void Join411(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
     imwrite("Escrita11.jpg",m_image);
 }
-void JoinCuatroporcuatro12(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
+void Join412(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
     imwrite("Escrita12.jpg",m_image);
 }
-void JoinCuatroporcuatro13(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
+void Join413(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
     imwrite("Escrita13.jpg",m_image);
 }
-void JoinCuatroporcuatro14(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
+void Join414(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
     imwrite("Escrita14.jpg",m_image);
 }
-void JoinCuatroporcuatro15(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
+void Join415(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
     imwrite("Escrita15.jpg",m_image);
 }
-void JoinCuatroporcuatro16(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
+void Join416(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
     imshow("Completa16",m_image);
     imwrite("Escrita16.jpg",m_image);
-    waitKey(0);
+    waitKey(2000);
+}
+void mostrar4(Tlista TT){
+    int pos=0;
+    while(TT!=NULL){
+        if(pos==0){
+            if(TT->nro==0){
+                Join4(LW4,uno4,480,360);
+            }else if(TT->nro==1){
+                Join4(LW4,dos4,480,360);
+            }else if(TT->nro==2){
+                Join4(LW4,tres4,480,360);
+            }else if(TT->nro==3){
+                Join4(LW4,cuatro4,480,360);
+            }else if(TT->nro==4){
+                Join4(LW4,cinco4,480,360);
+            }else if(TT->nro==5){
+                Join4(LW4,seis4,480,360);
+            }else if(TT->nro==6){
+                Join4(LW4,siete4,480,360);
+            }else if(TT->nro==7){
+                Join4(LW4,ocho4,480,360);
+            }else if(TT->nro==8){
+                Join4(LW4,nueve4,480,360);
+            }else if(TT->nro==9){
+                Join4(LW4,diez4,480,360);
+            }else if(TT->nro==10){
+                Join4(LW4,once4,480,360);
+            }else if(TT->nro==11){
+                Join4(LW4,doce4,480,360);
+            }else if(TT->nro==12){
+                Join4(LW4,trece4,480,360);
+            }else if(TT->nro==13){
+                Join4(LW4,catorce4,480,360);
+            }else if(TT->nro==14){
+                Join4(LW4,quince4,480,360);
+            }else if(TT->nro==15){
+                Join4(LW4,dieciseis4,480,360);
+            }
+        }else if(pos==1){ //Join42(LW4,quince4,320,360);
+            if(TT->nro==0){
+                Join42(LW4,uno4,320,360);
+            }else if(TT->nro==1){
+                Join42(LW4,dos4,320,360);
+            }else if(TT->nro==2){
+                Join42(LW4,tres4,320,360);
+            }else if(TT->nro==3){
+                Join42(LW4,cuatro4,320,360);
+            }else if(TT->nro==4){
+                Join42(LW4,cinco4,320,360);
+            }else if(TT->nro==5){
+                Join42(LW4,seis4,320,360);
+            }else if(TT->nro==6){
+                Join42(LW4,siete4,320,360);
+            }else if(TT->nro==7){
+                Join42(LW4,ocho4,320,360);
+            }else if(TT->nro==8){
+                Join42(LW4,nueve4,320,360);
+            }else if(TT->nro==9){
+                Join42(LW4,diez4,320,360);
+            }else if(TT->nro==10){
+                Join42(LW4,once4,320,360);
+            }else if(TT->nro==11){
+                Join42(LW4,doce4,320,360);
+            }else if(TT->nro==12){
+                Join42(LW4,trece4,320,360);
+            }else if(TT->nro==13){
+                Join42(LW4,catorce4,320,360);
+            }else if(TT->nro==14){
+                Join42(LW4,quince4,320,360);
+            }else if(TT->nro==15){
+                Join42(LW4,dieciseis4,320,360);
+            }
+
+        }else if(pos==2){//Join43(LW4,catorce4,160,360);
+            if(TT->nro==0){
+                Join43(LW4,uno4,160,360);
+            }else if(TT->nro==1){
+                Join43(LW4,dos4,160,360);
+            }else if(TT->nro==2){
+                Join43(LW4,tres4,160,360);
+            }else if(TT->nro==3){
+                Join43(LW4,cuatro4,160,360);
+            }else if(TT->nro==4){
+                Join43(LW4,cinco4,160,360);
+            }else if(TT->nro==5){
+                Join43(LW4,seis4,160,360);
+            }else if(TT->nro==6){
+                Join43(LW4,siete4,160,360);
+            }else if(TT->nro==7){
+                Join43(LW4,ocho4,160,360);
+            }else if(TT->nro==8){
+                Join43(LW4,nueve4,160,360);
+            }else if(TT->nro==9){
+                Join43(LW4,diez4,160,360);
+            }else if(TT->nro==10){
+                Join43(LW4,once4,160,360);
+            }else if(TT->nro==11){
+                Join43(LW4,doce4,160,360);
+            }else if(TT->nro==12){
+                Join43(LW4,trece4,160,360);
+            }else if(TT->nro==13){
+                Join43(LW4,catorce4,160,360);
+            }else if(TT->nro==14){
+                Join43(LW4,quince4,160,360);
+            }else if(TT->nro==15){
+                Join43(LW4,dieciseis4,160,360);
+            }
+        }else if(pos==3){//Join44(LW4,trece4,0,360);
+            if(TT->nro==0){
+                Join44(LW4,uno4,0,360);
+            }else if(TT->nro==1){
+                Join44(LW4,dos4,0,360);
+            }else if(TT->nro==2){
+                Join44(LW4,tres4,0,360);
+            }else if(TT->nro==3){
+                Join44(LW4,cuatro4,0,360);
+            }else if(TT->nro==4){
+                Join44(LW4,cinco4,0,360);
+            }else if(TT->nro==5){
+                Join44(LW4,seis4,0,360);
+            }else if(TT->nro==6){
+                Join44(LW4,siete4,0,360);
+            }else if(TT->nro==7){
+                Join44(LW4,ocho4,0,360);
+            }else if(TT->nro==8){
+                Join44(LW4,nueve4,0,360);
+            }else if(TT->nro==9){
+                Join44(LW4,diez4,0,360);
+            }else if(TT->nro==10){
+                Join44(LW4,once4,0,360);
+            }else if(TT->nro==11){
+                Join44(LW4,doce4,0,360);
+            }else if(TT->nro==12){
+                Join44(LW4,trece4,0,360);
+            }else if(TT->nro==13){
+                Join44(LW4,catorce4,0,360);
+            }else if(TT->nro==14){
+                Join44(LW4,quince4,0,360);
+            }else if(TT->nro==15){
+                Join44(LW4,dieciseis4,0,360);
+            }
+        }else if(pos==4){//Join45(laWea,cinco4,480,120);
+            if(TT->nro==0){
+                Join45(LW4,uno4,480,120);
+            }else if(TT->nro==1){
+                Join45(LW4,dos4,480,120);
+            }else if(TT->nro==2){
+                Join45(LW4,tres4,480,120);
+            }else if(TT->nro==3){
+                Join45(LW4,cuatro4,480,120);
+            }else if(TT->nro==4){
+                Join45(LW4,cinco4,480,120);
+            }else if(TT->nro==5){
+                Join45(LW4,seis4,480,120);
+            }else if(TT->nro==6){
+                Join45(LW4,siete4,480,120);
+            }else if(TT->nro==7){
+                Join45(LW4,ocho4,480,120);
+            }else if(TT->nro==8){
+                Join45(LW4,nueve4,480,120);
+            }else if(TT->nro==9){
+                Join45(LW4,diez4,480,120);
+            }else if(TT->nro==10){
+                Join45(LW4,once4,480,120);
+            }else if(TT->nro==11){
+                Join45(LW4,doce4,480,120);
+            }else if(TT->nro==12){
+                Join45(LW4,trece4,480,120);
+            }else if(TT->nro==13){
+                Join45(LW4,catorce4,480,120);
+            }else if(TT->nro==14){
+                Join45(LW4,quince4,480,120);
+            }else if(TT->nro==15){
+                Join45(LW4,dieciseis4,480,120);
+            }
+        }else if(pos==5){ //Join46(laWea,seis4,320,120);
+            if(TT->nro==0){
+                Join46(LW4,uno4,320,120);
+            }else if(TT->nro==1){
+                Join46(LW4,dos4,320,120);
+            }else if(TT->nro==2){
+                Join46(LW4,tres4,320,120);
+            }else if(TT->nro==3){
+                Join46(LW4,cuatro4,320,120);
+            }else if(TT->nro==4){
+                Join46(LW4,cinco4,320,120);
+            }else if(TT->nro==5){
+                Join46(LW4,seis4,320,120);
+            }else if(TT->nro==6){
+                Join46(LW4,siete4,320,120);
+            }else if(TT->nro==7){
+                Join46(LW4,ocho4,320,120);
+            }else if(TT->nro==8){
+                Join46(LW4,nueve4,320,120);
+            }else if(TT->nro==9){
+                Join46(LW4,diez4,320,120);
+            }else if(TT->nro==10){
+                Join46(LW4,once4,320,120);
+            }else if(TT->nro==11){
+                Join46(LW4,doce4,320,120);
+            }else if(TT->nro==12){
+                Join46(LW4,trece4,320,120);
+            }else if(TT->nro==13){
+                Join46(LW4,catorce4,320,120);
+            }else if(TT->nro==14){
+                Join46(LW4,quince4,320,120);
+            }else if(TT->nro==15){
+                Join46(LW4,dieciseis4,320,120);
+            }
+
+        }else if(pos==6){//Join47(laWea,siete4,160,120);
+            if(TT->nro==0){
+                Join47(LW4,uno4,160,120);
+            }else if(TT->nro==1){
+                Join47(LW4,dos4,160,120);
+            }else if(TT->nro==2){
+                Join47(LW4,tres4,160,120);
+            }else if(TT->nro==3){
+                Join47(LW4,cuatro4,160,120);
+            }else if(TT->nro==4){
+                Join47(LW4,cinco4,160,120);
+            }else if(TT->nro==5){
+                Join47(LW4,seis4,160,120);
+            }else if(TT->nro==6){
+                Join47(LW4,siete4,160,120);
+            }else if(TT->nro==7){
+                Join47(LW4,ocho4,160,120);
+            }else if(TT->nro==8){
+                Join47(LW4,nueve4,160,120);
+            }else if(TT->nro==9){
+                Join47(LW4,diez4,160,120);
+            }else if(TT->nro==10){
+                Join47(LW4,once4,160,120);
+            }else if(TT->nro==11){
+                Join47(LW4,doce4,160,120);
+            }else if(TT->nro==12){
+                Join47(LW4,trece4,160,120);
+            }else if(TT->nro==13){
+                Join47(LW4,catorce4,160,120);
+            }else if(TT->nro==14){
+                Join47(LW4,quince4,160,120);
+            }else if(TT->nro==15){
+                Join47(LW4,dieciseis4,160,120);
+            }
+        }else if(pos==7){//Join48(laWea,ocho4,0,120);
+            if(TT->nro==0){
+                Join48(LW4,uno4,0,120);
+            }else if(TT->nro==1){
+                Join48(LW4,dos4,0,120);
+            }else if(TT->nro==2){
+                Join48(LW4,tres4,0,120);
+            }else if(TT->nro==3){
+                Join48(LW4,cuatro4,0,120);
+            }else if(TT->nro==4){
+                Join48(LW4,cinco4,0,120);
+            }else if(TT->nro==5){
+                Join48(LW4,seis4,0,120);
+            }else if(TT->nro==6){
+                Join48(LW4,siete4,0,120);
+            }else if(TT->nro==7){
+                Join48(LW4,ocho4,0,120);
+            }else if(TT->nro==8){
+                Join48(LW4,nueve4,0,120);
+            }else if(TT->nro==9){
+                Join48(LW4,diez4,0,120);
+            }else if(TT->nro==10){
+                Join48(LW4,once4,0,120);
+            }else if(TT->nro==11){
+                Join48(LW4,doce4,0,120);
+            }else if(TT->nro==12){
+                Join48(LW4,trece4,0,120);
+            }else if(TT->nro==13){
+                Join48(LW4,catorce4,0,120);
+            }else if(TT->nro==14){
+                Join48(LW4,quince4,0,120);
+            }else if(TT->nro==15){
+                Join48(LW4,dieciseis4,0,120);
+            }
+        }else if(pos==8){//Join49(laWea,nueve4,480,240);
+            if(TT->nro==0){
+                Join49(LW4,uno4,480,240);
+            }else if(TT->nro==1){
+                Join49(LW4,dos4,480,240);
+            }else if(TT->nro==2){
+                Join49(LW4,tres4,480,240);
+            }else if(TT->nro==3){
+                Join49(LW4,cuatro4,480,240);
+            }else if(TT->nro==4){
+                Join49(LW4,cinco4,480,240);
+            }else if(TT->nro==5){
+                Join49(LW4,seis4,480,240);
+            }else if(TT->nro==6){
+                Join49(LW4,siete4,480,240);
+            }else if(TT->nro==7){
+                Join49(LW4,ocho4,480,240);
+            }else if(TT->nro==8){
+                Join49(LW4,nueve4,480,240);
+            }else if(TT->nro==9){
+                Join49(LW4,diez4,480,240);
+            }else if(TT->nro==10){
+                Join49(LW4,once4,480,240);
+            }else if(TT->nro==11){
+                Join49(LW4,doce4,480,240);
+            }else if(TT->nro==12){
+                Join49(LW4,trece4,480,240);
+            }else if(TT->nro==13){
+                Join49(LW4,catorce4,480,240);
+            }else if(TT->nro==14){
+                Join49(LW4,quince4,480,240);
+            }else if(TT->nro==15){
+                Join49(LW4,dieciseis4,480,240);
+            }
+        }else if(pos==9){ //Join410(laWea,diez4,320,240);
+            if(TT->nro==0){
+                Join410(LW4,uno4,320,240);
+            }else if(TT->nro==1){
+                Join410(LW4,dos4,320,240);
+            }else if(TT->nro==2){
+                Join410(LW4,tres4,320,240);
+            }else if(TT->nro==3){
+                Join410(LW4,cuatro4,320,240);
+            }else if(TT->nro==4){
+                Join410(LW4,cinco4,320,240);
+            }else if(TT->nro==5){
+                Join410(LW4,seis4,320,240);
+            }else if(TT->nro==6){
+                Join410(LW4,siete4,320,240);
+            }else if(TT->nro==7){
+                Join410(LW4,ocho4,320,240);
+            }else if(TT->nro==8){
+                Join410(LW4,nueve4,320,240);
+            }else if(TT->nro==9){
+                Join410(LW4,diez4,320,240);
+            }else if(TT->nro==10){
+                Join410(LW4,once4,320,240);
+            }else if(TT->nro==11){
+                Join410(LW4,doce4,320,240);
+            }else if(TT->nro==12){
+                Join410(LW4,trece4,320,240);
+            }else if(TT->nro==13){
+                Join410(LW4,catorce4,320,240);
+            }else if(TT->nro==14){
+                Join410(LW4,quince4,320,240);
+            }else if(TT->nro==15){
+                Join410(LW4,dieciseis4,320,240);
+            }
+
+        }else if(pos==10){//Join411(laWea,once4,160,240);
+            if(TT->nro==0){
+                Join411(LW4,uno4,160,240);
+            }else if(TT->nro==1){
+                Join411(LW4,dos4,160,240);
+            }else if(TT->nro==2){
+                Join411(LW4,tres4,160,240);
+            }else if(TT->nro==3){
+                Join411(LW4,cuatro4,160,240);
+            }else if(TT->nro==4){
+                Join411(LW4,cinco4,160,240);
+            }else if(TT->nro==5){
+                Join411(LW4,seis4,160,240);
+            }else if(TT->nro==6){
+                Join411(LW4,siete4,160,240);
+            }else if(TT->nro==7){
+                Join411(LW4,ocho4,160,240);
+            }else if(TT->nro==8){
+                Join411(LW4,nueve4,160,240);
+            }else if(TT->nro==9){
+                Join411(LW4,diez4,160,240);
+            }else if(TT->nro==10){
+                Join411(LW4,once4,160,240);
+            }else if(TT->nro==11){
+                Join411(LW4,doce4,160,240);
+            }else if(TT->nro==12){
+                Join411(LW4,trece4,160,240);
+            }else if(TT->nro==13){
+                Join411(LW4,catorce4,160,240);
+            }else if(TT->nro==14){
+                Join411(LW4,quince4,160,240);
+            }else if(TT->nro==15){
+                Join411(LW4,dieciseis4,160,240);
+            }
+        }else if(pos==11){//Join412(laWea,doce4,0,240);
+            if(TT->nro==0){
+                Join412(LW4,uno4,0,240);
+            }else if(TT->nro==1){
+                Join412(LW4,dos4,0,240);
+            }else if(TT->nro==2){
+                Join412(LW4,tres4,0,240);
+            }else if(TT->nro==3){
+                Join412(LW4,cuatro4,0,240);
+            }else if(TT->nro==4){
+                Join412(LW4,cinco4,0,240);
+            }else if(TT->nro==5){
+                Join412(LW4,seis4,0,240);
+            }else if(TT->nro==6){
+                Join412(LW4,siete4,0,240);
+            }else if(TT->nro==7){
+                Join412(LW4,ocho4,0,240);
+            }else if(TT->nro==8){
+                Join412(LW4,nueve4,0,240);
+            }else if(TT->nro==9){
+                Join412(LW4,diez4,0,240);
+            }else if(TT->nro==10){
+                Join412(LW4,once4,0,240);
+            }else if(TT->nro==11){
+                Join412(LW4,doce4,0,240);
+            }else if(TT->nro==12){
+                Join412(LW4,trece4,0,240);
+            }else if(TT->nro==13){
+                Join412(LW4,catorce4,0,240);
+            }else if(TT->nro==14){
+                Join412(LW4,quince4,0,240);
+            }else if(TT->nro==15){
+                Join412(LW4,dieciseis4,0,240);
+            }
+        }else if(pos==12){//Join413(laWea,cuatro4,480,0);
+            if(TT->nro==0){
+                Join413(LW4,uno4,480,0);
+            }else if(TT->nro==1){
+                Join413(LW4,dos4,480,0);
+            }else if(TT->nro==2){
+                Join413(LW4,tres4,480,0);
+            }else if(TT->nro==3){
+                Join413(LW4,cuatro4,480,0);
+            }else if(TT->nro==4){
+                Join413(LW4,cinco4,480,0);
+            }else if(TT->nro==5){
+                Join413(LW4,seis4,480,0);
+            }else if(TT->nro==6){
+                Join413(LW4,siete4,480,0);
+            }else if(TT->nro==7){
+                Join413(LW4,ocho4,480,0);
+            }else if(TT->nro==8){
+                Join413(LW4,nueve4,480,0);
+            }else if(TT->nro==9){
+                Join413(LW4,diez4,480,0);
+            }else if(TT->nro==10){
+                Join413(LW4,once4,480,0);
+            }else if(TT->nro==11){
+                Join413(LW4,doce4,480,0);
+            }else if(TT->nro==12){
+                Join413(LW4,trece4,480,0);
+            }else if(TT->nro==13){
+                Join413(LW4,catorce4,480,0);
+            }else if(TT->nro==14){
+                Join413(LW4,quince4,480,0);
+            }else if(TT->nro==15){
+                Join413(LW4,dieciseis4,480,0);
+            }
+        }else if(pos==13){ //Join414(laWea,tres4,320,0);
+            if(TT->nro==0){
+                Join414(LW4,uno4,320,0);
+            }else if(TT->nro==1){
+                Join414(LW4,dos4,320,0);
+            }else if(TT->nro==2){
+                Join414(LW4,tres4,320,0);
+            }else if(TT->nro==3){
+                Join414(LW4,cuatro4,320,0);
+            }else if(TT->nro==4){
+                Join414(LW4,cinco4,320,0);
+            }else if(TT->nro==5){
+                Join414(LW4,seis4,320,0);
+            }else if(TT->nro==6){
+                Join414(LW4,siete4,320,0);
+            }else if(TT->nro==7){
+                Join414(LW4,ocho4,320,0);
+            }else if(TT->nro==8){
+                Join414(LW4,nueve4,320,0);
+            }else if(TT->nro==9){
+                Join414(LW4,diez4,320,0);
+            }else if(TT->nro==10){
+                Join414(LW4,once4,320,0);
+            }else if(TT->nro==11){
+                Join414(LW4,doce4,320,0);
+            }else if(TT->nro==12){
+                Join414(LW4,trece4,320,0);
+            }else if(TT->nro==13){
+                Join414(LW4,catorce4,320,0);
+            }else if(TT->nro==14){
+                Join414(LW4,quince4,320,0);
+            }else if(TT->nro==15){
+                Join414(LW4,dieciseis4,320,0);
+            }
+
+        }else if(pos==14){//Join415(laWea,dos4,160,0);
+            if(TT->nro==0){
+                Join415(LW4,uno4,160,0);
+            }else if(TT->nro==1){
+                Join415(LW4,dos4,160,0);
+            }else if(TT->nro==2){
+                Join415(LW4,tres4,160,0);
+            }else if(TT->nro==3){
+                Join415(LW4,cuatro4,160,0);
+            }else if(TT->nro==4){
+                Join415(LW4,cinco4,160,0);
+            }else if(TT->nro==5){
+                Join415(LW4,seis4,160,0);
+            }else if(TT->nro==6){
+                Join415(LW4,siete4,160,0);
+            }else if(TT->nro==7){
+                Join415(LW4,ocho4,160,0);
+            }else if(TT->nro==8){
+                Join415(LW4,nueve4,160,0);
+            }else if(TT->nro==9){
+                Join415(LW4,diez4,160,0);
+            }else if(TT->nro==10){
+                Join415(LW4,once4,160,0);
+            }else if(TT->nro==11){
+                Join415(LW4,doce4,160,0);
+            }else if(TT->nro==12){
+                Join415(LW4,trece4,160,0);
+            }else if(TT->nro==13){
+                Join415(LW4,catorce4,160,0);
+            }else if(TT->nro==14){
+                Join415(LW4,quince4,160,0);
+            }else if(TT->nro==15){
+                Join415(LW4,dieciseis4,160,0);
+            }
+        }else if(pos==15){//Join416(laWea,uno4,0,0);
+            if(TT->nro==0){
+                Join416(LW4,uno4,0,0);
+            }else if(TT->nro==1){
+                Join416(LW4,dos4,0,0);
+            }else if(TT->nro==2){
+                Join416(LW4,tres4,0,0);
+            }else if(TT->nro==3){
+                Join416(LW4,cuatro4,0,0);
+            }else if(TT->nro==4){
+                Join416(LW4,cinco4,0,0);
+            }else if(TT->nro==5){
+                Join416(LW4,seis4,0,0);
+            }else if(TT->nro==6){
+                Join416(LW4,siete4,0,0);
+            }else if(TT->nro==7){
+                Join416(LW4,ocho4,0,0);
+            }else if(TT->nro==8){
+                Join416(LW4,nueve4,0,0);
+            }else if(TT->nro==9){
+                Join416(LW4,diez4,0,0);
+            }else if(TT->nro==10){
+                Join416(LW4,once4,0,0);
+            }else if(TT->nro==11){
+                Join416(LW4,doce4,0,0);
+            }else if(TT->nro==12){
+                Join416(LW4,trece4,0,0);
+            }else if(TT->nro==13){
+                Join416(LW4,catorce4,0,0);
+            }else if(TT->nro==14){
+                Join416(LW4,quince4,0,0);
+            }else if(TT->nro==15){
+                Join416(LW4,dieciseis4,0,0);
+            }
+        }
+
+        pos+=1;
+        TT=TT->sgte;
+
+    }
 }
 
 /*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
 int sobreescribirIMG4(Mat laWea){
-    Mat uno = imread("miniatura1.jpg",1);
-    Mat dos = imread("miniatura2.jpg",1);
-    Mat tres = imread("miniatura3.jpg",1);
-    Mat cuatro = imread("miniatura4.jpg",1);
-    Mat cinco = imread("miniatura5.jpg",1);
-    Mat seis = imread("miniatura6.jpg",1);
-    Mat siete = imread("miniatura7.jpg",1);
-    Mat ocho = imread("miniatura8.jpg",1);
-    Mat nueve = imread("miniatura9.jpg",1);
-    Mat diez = imread("miniatura10.jpg",1);
-    Mat once = imread("miniatura11.jpg",1);
-    Mat doce = imread("miniatura12.jpg",1);
-    Mat trece = imread("miniatura13.jpg",1);
-    Mat catorce = imread("miniatura14.jpg",1);
-    Mat quince = imread("miniatura15.jpg",1);
-    Mat dieciseis = imread("miniatura16.jpg",1);
-    while(true){
-        JoinCuatroporcuatro(laWea,cuatro,480,360);
-        JoinCuatroporcuatro2(laWea,uno,320,360);
-        JoinCuatroporcuatro3(laWea,dos,160,360);
-        JoinCuatroporcuatro4(laWea,tres,0,360);
-        JoinCuatroporcuatro5(laWea,cinco,480,120);
-        JoinCuatroporcuatro6(laWea,nueve,320,120);
-        JoinCuatroporcuatro7(laWea,seis,160,120);
-        JoinCuatroporcuatro8(laWea,ocho,0,120);
-        JoinCuatroporcuatro9(laWea,siete,480,240);
-        JoinCuatroporcuatro10(laWea,trece,320,240);
-        JoinCuatroporcuatro11(laWea,diez,160,240);
-        JoinCuatroporcuatro12(laWea,quince,0,240);
-        JoinCuatroporcuatro13(laWea,once,480,0);
-        JoinCuatroporcuatro14(laWea,dieciseis,320,0);
-        JoinCuatroporcuatro15(laWea,doce,160,0);
-        JoinCuatroporcuatro16(laWea,catorce,0,0);
-        break;
+     uno4 = imread("miniatura16.jpg",1);
+     dos4 = imread("miniatura15.jpg",1);
+     tres4 = imread("miniatura14.jpg",1);
+     cuatro4 = imread("miniatura13.jpg",1);
+
+     cinco4 = imread("miniatura8.jpg",1);
+     seis4 = imread("miniatura7.jpg",1);
+     siete4 = imread("miniatura6.jpg",1);
+     ocho4 = imread("miniatura5.jpg",1);
+
+     nueve4 = imread("miniatura12.jpg",1);
+     diez4 = imread("miniatura11.jpg",1);
+     once4 = imread("miniatura10.jpg",1);
+     doce4 = imread("miniatura9.jpg",1);
+
+     trece4 = imread("miniatura4.jpg",1);
+     catorce4 = imread("miniatura3.jpg",1);
+     quince4 = imread("miniatura2.jpg",1);
+    dieciseis4 = imread("miniatura1.jpg",1);
+    LW4=laWea;
+    int gen=0;
+    Poblacion M2=Muestra;
+    int fin=0;
+    while(M2->sgte->sgte!=NULL){
+        M2=M2->sgte;
+        M2=M2->sgte;
+        fin+=1;
+    }
+    while(Muestra->sgte->sgte!=NULL){
+        if(gen==fin){
+            cout<<"FINALIZADO";
+            waitKey(0);
+        }
+        cout<<"GENERACION \n";
+        cout<<gen;
+
+        if(Muestra->sgte!=NULL){
+            mostrar4(Muestra->sgte->individuo);
+            waitKey(4000);
+        }
+
+        if(Muestra->sgte->sgte!=NULL){
+            mostrar4(Muestra->sgte->sgte->individuo);
+            waitKey(4000);
+        }
+        mostrar4(Muestra->individuo);
+        waitKey(4000);
+        Muestra=Muestra->sgte;
+        Muestra=Muestra->sgte;
+        gen+=1;
+
     }
 }
 
@@ -133,7 +710,7 @@ void cuatroporcuatro16(Mat laWea17){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 16);
             Mat miniatura = CropCuatroporcuatro(laWea17, x, y, 160, 120, nombre);
-            JoinCuatroporcuatro(laWea17,miniatura,300,50);
+            Join4(laWea17,miniatura,300,50);
             sobreescribirIMG4(laWea17);
         }
     }

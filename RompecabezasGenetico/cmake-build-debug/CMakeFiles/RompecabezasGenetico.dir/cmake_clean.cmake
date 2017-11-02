@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/RompecabezasGenetico.dir/main.cpp.o"
+  "CMakeFiles/RompecabezasGenetico.dir/dosxdos.cpp.o"
   "CMakeFiles/RompecabezasGenetico.dir/cincoxcinco.cpp.o"
   "CMakeFiles/RompecabezasGenetico.dir/cuatroxcuatro.cpp.o"
   "CMakeFiles/RompecabezasGenetico.dir/tresxtres.cpp.o"
-  "CMakeFiles/RompecabezasGenetico.dir/dosxdos.cpp.o"
   "RompecabezasGenetico.pdb"
   "RompecabezasGenetico"
 )
