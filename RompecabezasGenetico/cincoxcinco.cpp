@@ -6,6 +6,42 @@
 #include <opencv2/highgui/highgui.hpp>
 #include <iostream>
 
+int tiempo5=2000;
+int continuar5=1;
+int disminuir5=1; //cuando se desea no mostrar una generacion
+int salto_generaciones5=0;
+void revisar5(int cont){
+
+    int decision;
+    cout<<"\n 1.Acelerar \n 3.Acelerar sin preguntar \n 2.Pausar \n 4.Continuar sin preguntar \n 5.Detener \n 6.Saltar n generaciones \n Ingrese su eleccion:";
+    cin>>decision;
+    if(decision==1){
+        tiempo5-=500;
+    }else if(decision==2){
+        while(decision!=1){
+            cout<<"\n Reanudar? 1:SI 2:NO \n";
+            cin>>decision;
+        }
+    }else if(decision==3){
+        tiempo5-=1000;
+        continuar5=0;
+
+    }else if(decision==4){
+        continuar5=0;
+    }
+    else if(decision==5){
+        while(true) {
+            cin >> decision;
+        }
+    }
+    else if(decision==6){
+        int generaciones_saltar=0;
+        cout<<"\n¿Cuantas generaciones desea saltarse? \n";
+        cin>>generaciones_saltar;
+        disminuir5=1;
+        salto_generaciones5=3*generaciones_saltar;
+    }
+}
 using namespace cv;
 using namespace std;
 Mat uno5,dos5,tres5,cuatro5,cinco5,seis5,siete5,ocho5,nueve5,diez5,once5,doce5,trece5,catorce5,quince5,dieciseis5,diecisiete5,dieciocho5,diecinueve5,veinte5,veintiuno5,veintidos5,veintitres5,veinticuatro5,veinticinco5,LW5;
@@ -121,7 +157,8 @@ void Join525(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
     imshow("Completa25",m_image);
     imwrite("Escrita25.jpg",m_image);
-    waitKey(4000);
+    waitKey(tiempo5);
+
 }
 
 void mostrar5(Tlista TT){
@@ -336,7 +373,7 @@ void mostrar5(Tlista TT){
             }else if(TT->nro==24){
                 Join54(LW5,veinticinco5,129,384);
             }
-        }else if(pos==4){//Join55(laWea,cinco4,0,384);
+        }else if(pos==4){//Join55(imag,cinco4,0,384);
             if(TT->nro==0){
                 Join55(LW5,uno5,0,384);
             }else if(TT->nro==1){
@@ -388,7 +425,7 @@ void mostrar5(Tlista TT){
             }else if(TT->nro==24){
                 Join55(LW5,veinticinco5,0,384);
             }
-        }else if(pos==5){ //Join56(laWea,seis4,512,288);
+        }else if(pos==5){ //Join56(imag,seis4,512,288);
             if(TT->nro==0){
                 Join56(LW5,uno5,512,288);
             }else if(TT->nro==1){
@@ -441,7 +478,7 @@ void mostrar5(Tlista TT){
                 Join56(LW5,veinticinco5,512,288);
             }
 
-        }else if(pos==6){//Join57(laWea,siete4,385,288);
+        }else if(pos==6){//Join57(imag,siete4,385,288);
             if(TT->nro==0){
                 Join57(LW5,uno5,385,288);
             }else if(TT->nro==1){
@@ -493,7 +530,7 @@ void mostrar5(Tlista TT){
             }else if(TT->nro==24){
                 Join57(LW5,veinticinco5,385,288);
             }
-        }else if(pos==7){//Join58(laWea,ocho4,257,288);
+        }else if(pos==7){//Join58(imag,ocho4,257,288);
             if(TT->nro==0){
                 Join58(LW5,uno5,257,288);
             }else if(TT->nro==1){
@@ -545,7 +582,7 @@ void mostrar5(Tlista TT){
             }else if(TT->nro==24){
                 Join58(LW5,veinticinco5,257,288);
             }
-        }else if(pos==8){//Join59(laWea,nueve4,129,240);
+        }else if(pos==8){//Join59(imag,nueve4,129,240);
             if(TT->nro==0){
                 Join59(LW5,uno5,129,288);
             }else if(TT->nro==1){
@@ -597,7 +634,7 @@ void mostrar5(Tlista TT){
             }else if(TT->nro==24){
                 Join59(LW5,veinticinco5,129,288);
             }
-        }else if(pos==9){ //Join510(laWea,diez4,0,288);
+        }else if(pos==9){ //Join510(imag,diez4,0,288);
             if(TT->nro==0){
                 Join510(LW5,uno5,0,288);
             }else if(TT->nro==1){
@@ -650,7 +687,7 @@ void mostrar5(Tlista TT){
                 Join510(LW5,veinticinco5,0,288);
             }
 
-        }else if(pos==10){//Join511(laWea,once4,512,192);
+        }else if(pos==10){//Join511(imag,once4,512,192);
             if(TT->nro==0){
                 Join511(LW5,uno5,512,192);
             }else if(TT->nro==1){
@@ -702,7 +739,7 @@ void mostrar5(Tlista TT){
             }else if(TT->nro==24){
                 Join511(LW5,veinticinco5,512,192);
             }
-        }else if(pos==11){//Join512(laWea,doce4,385,192);
+        }else if(pos==11){//Join512(imag,doce4,385,192);
             if(TT->nro==0){
                 Join512(LW5,uno5,385,192);
             }else if(TT->nro==1){
@@ -754,7 +791,7 @@ void mostrar5(Tlista TT){
             }else if(TT->nro==24){
                 Join512(LW5,veinticinco5,385,192);
             }
-        }else if(pos==12){//Join513(laWea,cuatro4,257,192);
+        }else if(pos==12){//Join513(imag,cuatro4,257,192);
             if(TT->nro==0){
                 Join513(LW5,uno5,257,192);
             }else if(TT->nro==1){
@@ -806,7 +843,7 @@ void mostrar5(Tlista TT){
             }else if(TT->nro==24){
                 Join513(LW5,veinticinco5,257,192);
             }
-        }else if(pos==13){ //Join514(laWea,tres4,129,192);
+        }else if(pos==13){ //Join514(imag,tres4,129,192);
             if(TT->nro==0){
                 Join514(LW5,uno5,129,192);
             }else if(TT->nro==1){
@@ -859,7 +896,7 @@ void mostrar5(Tlista TT){
                 Join514(LW5,veinticinco5,129,192);
             }
 
-        }else if(pos==14){//Join515(laWea,dos4,0,192);
+        }else if(pos==14){//Join515(imag,dos4,0,192);
             if(TT->nro==0){
                 Join515(LW5,uno5,0,192);
             }else if(TT->nro==1){
@@ -911,7 +948,7 @@ void mostrar5(Tlista TT){
             }else if(TT->nro==24){
                 Join515(LW5,veinticinco5,0,192);
             }
-        }else if(pos==15){//Join516(laWea,uno4,512,96);
+        }else if(pos==15){//Join516(imag,uno4,512,96);
             if(TT->nro==0){
                 Join516(LW5,uno5,512,96);
             }else if(TT->nro==1){
@@ -963,7 +1000,7 @@ void mostrar5(Tlista TT){
             }else if(TT->nro==24){
                 Join516(LW5,veinticinco5,512,96);
             }
-        }else if(pos==16){//Join516(laWea,uno4,385,96);
+        }else if(pos==16){//Join516(imag,uno4,385,96);
             if(TT->nro==0){
                 Join517(LW5,uno5,385,96);
             }else if(TT->nro==1){
@@ -1015,7 +1052,7 @@ void mostrar5(Tlista TT){
             }else if(TT->nro==24){
                 Join517(LW5,veinticinco5,385,96);
             }
-        }else if(pos==17){//Join516(laWea,uno4,257,96);
+        }else if(pos==17){//Join516(imag,uno4,257,96);
             if(TT->nro==0){
                 Join518(LW5,uno5,257,96);
             }else if(TT->nro==1){
@@ -1067,7 +1104,7 @@ void mostrar5(Tlista TT){
             }else if(TT->nro==24){
                 Join518(LW5,veinticinco5,257,96);
             }
-        }else if(pos==18){//Join516(laWea,uno4,129,96);
+        }else if(pos==18){//Join516(imag,uno4,129,96);
             if(TT->nro==0){
                 Join519(LW5,uno5,129,96);
             }else if(TT->nro==1){
@@ -1119,7 +1156,7 @@ void mostrar5(Tlista TT){
             }else if(TT->nro==24){
                 Join519(LW5,veinticinco5,129,96);
             }
-        }else if(pos==19){//Join516(laWea,uno4,0,96);
+        }else if(pos==19){//Join516(imag,uno4,0,96);
             if(TT->nro==0){
                 Join520(LW5,uno5,0,96);
             }else if(TT->nro==1){
@@ -1171,7 +1208,7 @@ void mostrar5(Tlista TT){
             }else if(TT->nro==24){
                 Join520(LW5,veinticinco5,0,96);
             }
-        }else if(pos==20){//Join516(laWea,uno4,512,0);
+        }else if(pos==20){//Join516(imag,uno4,512,0);
             if(TT->nro==0){
                 Join521(LW5,uno5,512,0);
             }else if(TT->nro==1){
@@ -1223,7 +1260,7 @@ void mostrar5(Tlista TT){
             }else if(TT->nro==24){
                 Join521(LW5,veinticinco5,512,0);
             }
-        }else if(pos==21){//Join516(laWea,uno4,385,0);
+        }else if(pos==21){//Join516(imag,uno4,385,0);
             if(TT->nro==0){
                 Join522(LW5,uno5,385,0);
             }else if(TT->nro==1){
@@ -1275,7 +1312,7 @@ void mostrar5(Tlista TT){
             }else if(TT->nro==24){
                 Join522(LW5,veinticinco5,385,0);
             }
-        }else if(pos==22){//Join516(laWea,uno4,257,0);
+        }else if(pos==22){//Join516(imag,uno4,257,0);
             if(TT->nro==0){
                 Join523(LW5,uno5,257,0);
             }else if(TT->nro==1){
@@ -1327,7 +1364,7 @@ void mostrar5(Tlista TT){
             }else if(TT->nro==24){
                 Join523(LW5,veinticinco5,257,0);
             }
-        }else if(pos==23){//Join516(laWea,uno4,129,0);
+        }else if(pos==23){//Join516(imag,uno4,129,0);
             if(TT->nro==0){
                 Join524(LW5,uno5,129,0);
             }else if(TT->nro==1){
@@ -1379,7 +1416,7 @@ void mostrar5(Tlista TT){
             }else if(TT->nro==24){
                 Join524(LW5,veinticinco5,129,0);
             }
-        }else if(pos==24){//Join516(laWea,uno4,0,0);
+        }else if(pos==24){//Join516(imag,uno4,0,0);
             if(TT->nro==0){
                 Join525(LW5,uno5,0,0);
             }else if(TT->nro==1){
@@ -1440,7 +1477,7 @@ void mostrar5(Tlista TT){
 
 /*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
-int sobreescribirIMG5(Mat laWea) {
+int sobreescribirIMG5(Mat imag) {
     uno5 = imread("miniatura25.jpg", 1);
     dos5 = imread("miniatura24.jpg", 1);
     tres5 = imread("miniatura23.jpg", 1);
@@ -1466,302 +1503,309 @@ int sobreescribirIMG5(Mat laWea) {
     veintitres5 = imread("miniatura3.jpg", 1);
     veinticuatro5 = imread("miniatura2.jpg", 1);
     veinticinco5 = imread("miniatura1.jpg", 1);
-    LW5 = laWea;
-    int gen=0;
-    Poblacion M2=Muestra;
-    int fin=0;
-    while(M2->sgte->sgte!=NULL){
-        M2=M2->sgte;
-        M2=M2->sgte;
-        fin+=1;
+    LW5 = imag;
+
+    int gen = 1;
+    Poblacion M2 = Muestra;
+    int fin = 0;
+    while (M2 != NULL) {
+        fin += 1;
+        M2 = M2->sgte;
     }
-    while(Muestra->sgte->sgte!=NULL){
-        if(gen==fin){
-            cout<<"FINALIZADO";
+    int cont = 0; //condicion para detenerse en el ultimo individuo con un wait infinito
+    int cont2 = 0; //sirve para mostrar el numero de generacion
+    while (Muestra != NULL) {
+        if (continuar5 != 0) {
+            revisar5(cont);
+        }
+
+        cout << "\n GENERACION :";
+        if (cont2 == 3) {
+            cont2 = 0;
+            gen += 1;
+        }
+        cont2 += 1;
+        cont += 1;
+        cout << gen;
+        cout << "\n";
+        if (salto_generaciones5 == 0) {
+            mostrar5(Muestra->individuo);
+            disminuir5 = 0;
+        }
+        if (disminuir5 == 1) {
+            salto_generaciones5 -= 1;
+        }
+        waitKey(tiempo5);
+        reportarLista(Muestra->individuo);
+        Muestra = Muestra->sgte;
+        if (cont == fin) {
+            cout << "FINALIZADO\n";
             waitKey(0);
         }
-        cout<<"GENERACION \n";
-        cout<<gen;
-
-        if(Muestra->sgte!=NULL){
-            mostrar5(Muestra->sgte->individuo);
-            waitKey(4000);
-        }
-
-        if(Muestra->sgte->sgte!=NULL){
-            mostrar5(Muestra->sgte->sgte->individuo);
-            waitKey(4000);
-        }
-        mostrar5(Muestra->individuo);
-        waitKey(4000);
-        Muestra=Muestra->sgte;
-        Muestra=Muestra->sgte;
-        gen+=1;
-
     }
 }
 /*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
-void cincoporcinco25(Mat laWea26){
+void cincoporcinco25(Mat imag26){
     for(int y=384 ; y<=480; y+=96){
         for(int x=512; x<=640; x+=128){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 25);
-            Mat miniatura = CropCincoporcinco(laWea26, x, y, 128, 96, nombre);
-            Join5(laWea26,miniatura,300,50);
-            sobreescribirIMG5(laWea26);
+            Mat miniatura = CropCincoporcinco(imag26, x, y, 128, 96, nombre);
+            Join5(imag26,miniatura,300,50);
+            sobreescribirIMG5(imag26);
         }
     }
 }
-void cincoporcinco24(Mat laWea25){
+void cincoporcinco24(Mat imag25){
     for(int y=384 ; y<=480; y+=96){
         for(int x=385; x<=640; x+=128){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 24);
-            Mat miniatura = CropCincoporcinco(laWea25, x, y, 128, 96, nombre);
-            cincoporcinco25(laWea25);
+            Mat miniatura = CropCincoporcinco(imag25, x, y, 128, 96, nombre);
+            cincoporcinco25(imag25);
         }
     }
 }
-void cincoporcinco23(Mat laWea24){
+void cincoporcinco23(Mat imag24){
     for(int y=384 ; y<=480; y+=96){
         for(int x=257; x<=640; x+=128){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 23);
-            Mat miniatura = CropCincoporcinco(laWea24, x, y, 128, 96, nombre);
-            cincoporcinco24(laWea24);
+            Mat miniatura = CropCincoporcinco(imag24, x, y, 128, 96, nombre);
+            cincoporcinco24(imag24);
         }
     }
 }
-void cincoporcinco22(Mat laWea23){
+void cincoporcinco22(Mat imag23){
     for(int y=384 ; y<=480; y+=96){
         for(int x=129; x<=640; x+=128) {
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 22);
-            Mat miniatura = CropCincoporcinco(laWea23, x, y, 128, 96, nombre);
-            cincoporcinco23(laWea23);
+            Mat miniatura = CropCincoporcinco(imag23, x, y, 128, 96, nombre);
+            cincoporcinco23(imag23);
         }
     }
 }
-void cincoporcinco21(Mat laWea22){
+void cincoporcinco21(Mat imag22){
     for(int y=384 ; y<=480; y+=96){
         for(int x=0; x<=640; x+=128){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 21);
-            Mat miniatura = CropCincoporcinco(laWea22, x, y, 128, 96, nombre);
-            cincoporcinco22(laWea22);
+            Mat miniatura = CropCincoporcinco(imag22, x, y, 128, 96, nombre);
+            cincoporcinco22(imag22);
         }
     }
 }
 
 /*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
-void cincoporcinco20(Mat laWea21){
+void cincoporcinco20(Mat imag21){
     for(int y=288 ; y<=480; y+=96){
         for(int x=512; x<=640; x+=128){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 20);
-            Mat miniatura = CropCincoporcinco(laWea21, x, y, 128, 96, nombre);
-            cincoporcinco21(laWea21);
+            Mat miniatura = CropCincoporcinco(imag21, x, y, 128, 96, nombre);
+            cincoporcinco21(imag21);
         }
     }
 }
-void cincoporcinco19(Mat laWea20){
+void cincoporcinco19(Mat imag20){
     for(int y=288 ; y<=480; y+=96){
         for(int x=385; x<=640; x+=128){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 19);
-            Mat miniatura = CropCincoporcinco(laWea20, x, y, 128, 96, nombre);
-            cincoporcinco20(laWea20);
+            Mat miniatura = CropCincoporcinco(imag20, x, y, 128, 96, nombre);
+            cincoporcinco20(imag20);
         }
     }
 }
-void cincoporcinco18(Mat laWea19){
+void cincoporcinco18(Mat imag19){
     for(int y=288 ; y<=480; y+=96){
         for(int x=257; x<=640; x+=128){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 18);
-            Mat miniatura = CropCincoporcinco(laWea19, x, y, 128, 96, nombre);
-            cincoporcinco19(laWea19);
+            Mat miniatura = CropCincoporcinco(imag19, x, y, 128, 96, nombre);
+            cincoporcinco19(imag19);
         }
     }
 }
-void cincoporcinco17(Mat laWea18){
+void cincoporcinco17(Mat imag18){
     for(int y=288 ; y<=480; y+=96){
         for(int x=129; x<=640; x+=128) {
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 17);
-            Mat miniatura = CropCincoporcinco(laWea18, x, y, 128, 96, nombre);
-            cincoporcinco18(laWea18);
+            Mat miniatura = CropCincoporcinco(imag18, x, y, 128, 96, nombre);
+            cincoporcinco18(imag18);
         }
     }
 }
-void cincoporcinco16(Mat laWea17){
+void cincoporcinco16(Mat imag17){
     for(int y=288 ; y<=480; y+=96){
         for(int x=0; x<=640; x+=128){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 16);
-            Mat miniatura = CropCincoporcinco(laWea17, x, y, 128, 96, nombre);
-            cincoporcinco17(laWea17);
+            Mat miniatura = CropCincoporcinco(imag17, x, y, 128, 96, nombre);
+            cincoporcinco17(imag17);
         }
     }
 }
 
 /*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
-void cincoporcinco15(Mat laWea16){
+void cincoporcinco15(Mat imag16){
     for(int y=192 ; y<=480; y+=96){
         for(int x=512; x<=640; x+=128){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 15);
-            Mat miniatura = CropCincoporcinco(laWea16, x, y, 128, 96, nombre);
-            cincoporcinco16(laWea16);
+            Mat miniatura = CropCincoporcinco(imag16, x, y, 128, 96, nombre);
+            cincoporcinco16(imag16);
         }
     }
 }
-void cincoporcinco14(Mat laWea15){
+void cincoporcinco14(Mat imag15){
     for(int y=192 ; y<=480; y+=96){
         for(int x=385; x<=640; x+=128){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 14);
-            Mat miniatura = CropCincoporcinco(laWea15, x, y, 128, 96, nombre);
-            cincoporcinco15(laWea15);
+            Mat miniatura = CropCincoporcinco(imag15, x, y, 128, 96, nombre);
+            cincoporcinco15(imag15);
         }
     }
 }
-void cincoporcinco13(Mat laWea14){
+void cincoporcinco13(Mat imag14){
     for(int y=192 ; y<=480; y+=96){
         for(int x=257; x<=640; x+=128){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 13);
-            Mat miniatura = CropCincoporcinco(laWea14, x, y, 128, 96, nombre);
-            cincoporcinco14(laWea14);
+            Mat miniatura = CropCincoporcinco(imag14, x, y, 128, 96, nombre);
+            cincoporcinco14(imag14);
         }
     }
 }
-void cincoporcinco12(Mat laWea13){
+void cincoporcinco12(Mat imag13){
     for(int y=192 ; y<=480; y+=96){
         for(int x=129; x<=640; x+=128) {
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 12);
-            Mat miniatura = CropCincoporcinco(laWea13, x, y, 128, 96, nombre);
-            cincoporcinco13(laWea13);
+            Mat miniatura = CropCincoporcinco(imag13, x, y, 128, 96, nombre);
+            cincoporcinco13(imag13);
         }
     }
 }
-void cincoporcinco11(Mat laWea12){
+void cincoporcinco11(Mat imag12){
     for(int y=192 ; y<=480; y+=96){
         for(int x=0; x<=640; x+=128){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 11);
-            Mat miniatura = CropCincoporcinco(laWea12, x, y, 128, 96, nombre);
-            cincoporcinco12(laWea12);
+            Mat miniatura = CropCincoporcinco(imag12, x, y, 128, 96, nombre);
+            cincoporcinco12(imag12);
         }
     }
 }
 
 /*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
-void cincoporcinco10(Mat laWea11){
+void cincoporcinco10(Mat imag11){
     for(int y=96 ; y<=480; y+=96){
         for(int x=512; x<=640; x+=128){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 10);
-            Mat miniatura = CropCincoporcinco(laWea11, x, y, 128, 96, nombre);
-            cincoporcinco11(laWea11);
+            Mat miniatura = CropCincoporcinco(imag11, x, y, 128, 96, nombre);
+            cincoporcinco11(imag11);
         }
     }
 }
-void cincoporcinco9(Mat laWea10){
+void cincoporcinco9(Mat imag10){
     for(int y=96 ; y<=480; y+=96){
         for(int x=385; x<=640; x+=128){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 9);
-            Mat miniatura = CropCincoporcinco(laWea10, x, y, 128, 96, nombre);
-            cincoporcinco10(laWea10);
+            Mat miniatura = CropCincoporcinco(imag10, x, y, 128, 96, nombre);
+            cincoporcinco10(imag10);
         }
     }
 }
-void cincoporcinco8(Mat laWea9){
+void cincoporcinco8(Mat imag9){
     for(int y=96 ; y<=480; y+=96){
         for(int x=257; x<=640; x+=128){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 8);
-            Mat miniatura = CropCincoporcinco(laWea9, x, y, 128, 96, nombre);
-            cincoporcinco9(laWea9);
+            Mat miniatura = CropCincoporcinco(imag9, x, y, 128, 96, nombre);
+            cincoporcinco9(imag9);
         }
     }
 }
-void cincoporcinco7(Mat laWea8){
+void cincoporcinco7(Mat imag8){
     for(int y=96 ; y<=480; y+=96){
         for(int x=129; x<=640; x+=128) {
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 7);
-            Mat miniatura = CropCincoporcinco(laWea8, x, y, 128, 96, nombre);
-            cincoporcinco8(laWea8);
+            Mat miniatura = CropCincoporcinco(imag8, x, y, 128, 96, nombre);
+            cincoporcinco8(imag8);
         }
     }
 }
-void cincoporcinco6(Mat laWea7){
+void cincoporcinco6(Mat imag7){
     for(int y=96 ; y<=480; y+=96){
         for(int x=0; x<=640; x+=128){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 6);
-            Mat miniatura = CropCincoporcinco(laWea7, x, y, 128, 96, nombre);
-            cincoporcinco7(laWea7);
+            Mat miniatura = CropCincoporcinco(imag7, x, y, 128, 96, nombre);
+            cincoporcinco7(imag7);
         }
     }
 }
 
 /*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
-void cincoporcinco5(Mat laWea6){
+void cincoporcinco5(Mat imag6){
     for(int y=0 ; y<=480; y+=96){
         for(int x=512; x<=640; x+=128){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 5);
-            Mat miniatura = CropCincoporcinco(laWea6, x, y, 128, 96, nombre);
-            cincoporcinco6(laWea6);
+            Mat miniatura = CropCincoporcinco(imag6, x, y, 128, 96, nombre);
+            cincoporcinco6(imag6);
         }
     }
 }
-void cincoporcinco4(Mat laWea5){
+void cincoporcinco4(Mat imag5){
     for(int y=0 ; y<=480; y+=96){
         for(int x=385; x<=640; x+=128){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 4);
-            Mat miniatura = CropCincoporcinco(laWea5, x, y, 128, 96, nombre);
-            cincoporcinco5(laWea5);
+            Mat miniatura = CropCincoporcinco(imag5, x, y, 128, 96, nombre);
+            cincoporcinco5(imag5);
         }
     }
 }
-void cincoporcinco3(Mat laWea4){
+void cincoporcinco3(Mat imag4){
     for(int y=0 ; y<=480; y+=96){
         for(int x=257; x<=640; x+=128){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 3);
-            Mat miniatura = CropCincoporcinco(laWea4, x, y, 128, 96, nombre);
-            cincoporcinco4(laWea4);
+            Mat miniatura = CropCincoporcinco(imag4, x, y, 128, 96, nombre);
+            cincoporcinco4(imag4);
         }
     }
 }
-void cincoporcinco2(Mat laWea3){
+void cincoporcinco2(Mat imag3){
     for(int y=0 ; y<=480; y+=96){
         for(int x=129; x<=640; x+=128) {
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 2);
-            Mat miniatura = CropCincoporcinco(laWea3, x, y, 128, 96, nombre);
-            cincoporcinco3(laWea3);
+            Mat miniatura = CropCincoporcinco(imag3, x, y, 128, 96, nombre);
+            cincoporcinco3(imag3);
         }
     }
 }
-void cincoporcinco1(Mat laWea2){
+void cincoporcinco1(Mat imag2){
     for(int y=0 ; y<=480; y+=96){
         for(int x=0; x<=640; x+=128){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 1);
-            Mat miniatura = CropCincoporcinco(laWea2, x, y, 128, 96, nombre);
-            cincoporcinco2(laWea2);
+            Mat miniatura = CropCincoporcinco(imag2, x, y, 128, 96, nombre);
+            cincoporcinco2(imag2);
         }
     }
 }

@@ -194,6 +194,11 @@ RompecabezasGenetico: CMakeFiles/RompecabezasGenetico.dir/cincoxcinco.cpp.o
 RompecabezasGenetico: CMakeFiles/RompecabezasGenetico.dir/cuatroxcuatro.cpp.o
 RompecabezasGenetico: CMakeFiles/RompecabezasGenetico.dir/tresxtres.cpp.o
 RompecabezasGenetico: CMakeFiles/RompecabezasGenetico.dir/build.make
+RompecabezasGenetico: /usr/lib/x86_64-linux-gnu/libsfml-system.so
+RompecabezasGenetico: /usr/lib/x86_64-linux-gnu/libsfml-graphics.so
+RompecabezasGenetico: /usr/lib/x86_64-linux-gnu/libsfml-window.so
+RompecabezasGenetico: /usr/lib/x86_64-linux-gnu/libsfml-network.so
+RompecabezasGenetico: /usr/lib/x86_64-linux-gnu/libsfml-audio.so
 RompecabezasGenetico: CMakeFiles/RompecabezasGenetico.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/esteban/RompecabezasGenetico/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable RompecabezasGenetico"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RompecabezasGenetico.dir/link.txt --verbose=$(VERBOSE)

@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "../CMakeLists.txt"
+  "../Images/FindSFML.cmake"
   "CMakeFiles/3.8.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.8.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.8.2/CMakeSystem.cmake"
@@ -25,7 +26,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/esteban/clion-2017.1.3/bin/cmake/share/cmake-3.8/Modules/Compiler/GNU.cmake"
   "/home/esteban/clion-2017.1.3/bin/cmake/share/cmake-3.8/Modules/FindPackageHandleStandardArgs.cmake"
   "/home/esteban/clion-2017.1.3/bin/cmake/share/cmake-3.8/Modules/FindPackageMessage.cmake"
-  "/home/esteban/clion-2017.1.3/bin/cmake/share/cmake-3.8/Modules/FindPkgConfig.cmake"
   "/home/esteban/clion-2017.1.3/bin/cmake/share/cmake-3.8/Modules/Platform/Linux-GNU-C.cmake"
   "/home/esteban/clion-2017.1.3/bin/cmake/share/cmake-3.8/Modules/Platform/Linux-GNU-CXX.cmake"
   "/home/esteban/clion-2017.1.3/bin/cmake/share/cmake-3.8/Modules/Platform/Linux-GNU.cmake"

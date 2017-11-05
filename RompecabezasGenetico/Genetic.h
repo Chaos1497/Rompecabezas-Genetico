@@ -47,7 +47,6 @@ int random(int rango){
     return num;
 }
 
-
 Tlista combinarA(Tlista A_, Tlista B_,int matr, int mutador){
     Tlista R_=NULL;
     int I=0;
@@ -57,7 +56,6 @@ Tlista combinarA(Tlista A_, Tlista B_,int matr, int mutador){
     int mt3=random(matr*matr);
     if(mt1>mt2){
         while(recorredor < matr*matr){
-
                 if(I<mt1){
                     insertarFinal(R_, A_->nro);
                     A_ = A_->sgte;
@@ -197,7 +195,7 @@ void iniciar(int matriz) {
             mtr = 0;
             pos2++;
         }
-        mutar=mtr;
+
         P=NULL;
         /*Comienza a insertar en la nueva poblacion*/
 
@@ -211,8 +209,10 @@ void iniciar(int matriz) {
         insertarFinal_P(P,fitnes_por_columna(C1,C8_R),C8_R);
         ordenarLista(P);
         reportarLista_P(P);
-        insertarFinal_P(Muestra,0,P->individuo);
+
+        insertarFinal_P(Muestra,0,P->sgte->sgte->individuo);
         insertarFinal_P(Muestra,0,P->sgte->individuo);
+        insertarFinal_P(Muestra,0,P->individuo);
 
         A = NULL;
         B = NULL;
@@ -231,14 +231,6 @@ void iniciar(int matriz) {
         cout<<generacion;
     }
 }
-
-    /*
-        JoinDospordos(laWea,dos,320,0);
-        JoinDospordos2(laWea,tres,0,0);
-        JoinDospordos3(laWea,cuatro,0,240);
-        JoinDospordos4(laWea,uno,320,240);
-        */
-
 //Calcular donde se ocupa más la mutacion
 // no modificar donde este la mutacion
 #endif //ROMPECABEZASGENETICO_GENETIC_H

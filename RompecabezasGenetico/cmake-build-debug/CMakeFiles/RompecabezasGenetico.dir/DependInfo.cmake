@@ -16,26 +16,6 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/local/include"
   "/usr/local/include/opencv"
-  "/usr/local/Cellar/allegro/5.2.1.1_1/include"
-  "/usr/include/gtk-3.0"
-  "/usr/include/at-spi2-atk/2.0"
-  "/usr/include/at-spi-2.0"
-  "/usr/include/dbus-1.0"
-  "/usr/lib/x86_64-linux-gnu/dbus-1.0/include"
-  "/usr/include/gio-unix-2.0"
-  "/usr/include/mirclient"
-  "/usr/include/mircore"
-  "/usr/include/mircookie"
-  "/usr/include/cairo"
-  "/usr/include/pango-1.0"
-  "/usr/include/harfbuzz"
-  "/usr/include/atk-1.0"
-  "/usr/include/pixman-1"
-  "/usr/include/freetype2"
-  "/usr/include/libpng12"
-  "/usr/include/gdk-pixbuf-2.0"
-  "/usr/include/glib-2.0"
-  "/usr/lib/x86_64-linux-gnu/glib-2.0/include"
   )
 
 # Targets to which this target links.

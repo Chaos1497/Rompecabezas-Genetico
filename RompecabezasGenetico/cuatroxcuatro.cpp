@@ -1,11 +1,43 @@
 #include <stdio.h>
 #include "cv.h"
-#include "highgui.h"
 #include "Individuos_estructura.h"
 #include <opencv2/highgui/highgui.hpp>
-#include <iostream>
 #include "Genetic.h"
 
+int tiempo4=2000;
+int continuar4=1;
+int disminuir4=1; //cuando se desea no mostrar una generacion
+int salto_generaciones4=0;
+void revisar4(int cont){
+
+    int decision;
+    cout<<"\n 1.Acelerar \n 3.Acelerar sin preguntar \n 2.Pausar \n 4.Continuar sin preguntar \n 5.Detener \n 6.Saltar n generaciones \n Ingrese su eleccion:";
+    cin>>decision;
+    if(decision==1){
+        tiempo4-=500;
+    }else if(decision==2){
+        while(decision!=1){
+            cout<<"\n Reanudar? 1:SI 2:NO \n";
+            cin>>decision;
+        }
+    }else if(decision==3){
+        tiempo4-=1000;
+        continuar4=0;
+
+    }else if(decision==4){
+        continuar4=0;
+    }
+    else if(decision==5){
+        waitKey(0);
+    }
+    else if(decision==6){
+        int generaciones_saltar=0;
+        cout<<"\n¿Cuantas generaciones desea saltarse? \n";
+        cin>>generaciones_saltar;
+        disminuir4=1;
+        salto_generaciones4=3*generaciones_saltar;
+    }
+}
 using namespace cv;
 using namespace std;
 Mat uno4,dos4,tres4,cuatro4,cinco4,seis4,siete4,ocho4,nueve4,diez4,once4,doce4,trece4,catorce4,quince4,dieciseis4,LW4;
@@ -84,8 +116,9 @@ void Join416(Mat& m_image, Mat& s_image, int x_pos, int y_pos){
     s_image.copyTo(m_image(Rect(x_pos, y_pos, s_image.cols, s_image.rows)));
     imshow("Completa16",m_image);
     imwrite("Escrita16.jpg",m_image);
-    waitKey(2000);
+    waitKey(tiempo4);
 }
+
 void mostrar4(Tlista TT){
     int pos=0;
     while(TT!=NULL){
@@ -226,7 +259,7 @@ void mostrar4(Tlista TT){
             }else if(TT->nro==15){
                 Join44(LW4,dieciseis4,0,360);
             }
-        }else if(pos==4){//Join45(laWea,cinco4,480,120);
+        }else if(pos==4){//Join45(imag,cinco4,480,120);
             if(TT->nro==0){
                 Join45(LW4,uno4,480,120);
             }else if(TT->nro==1){
@@ -260,7 +293,7 @@ void mostrar4(Tlista TT){
             }else if(TT->nro==15){
                 Join45(LW4,dieciseis4,480,120);
             }
-        }else if(pos==5){ //Join46(laWea,seis4,320,120);
+        }else if(pos==5){ //Join46(imag,seis4,320,120);
             if(TT->nro==0){
                 Join46(LW4,uno4,320,120);
             }else if(TT->nro==1){
@@ -295,7 +328,7 @@ void mostrar4(Tlista TT){
                 Join46(LW4,dieciseis4,320,120);
             }
 
-        }else if(pos==6){//Join47(laWea,siete4,160,120);
+        }else if(pos==6){//Join47(imag,siete4,160,120);
             if(TT->nro==0){
                 Join47(LW4,uno4,160,120);
             }else if(TT->nro==1){
@@ -329,7 +362,7 @@ void mostrar4(Tlista TT){
             }else if(TT->nro==15){
                 Join47(LW4,dieciseis4,160,120);
             }
-        }else if(pos==7){//Join48(laWea,ocho4,0,120);
+        }else if(pos==7){//Join48(imag,ocho4,0,120);
             if(TT->nro==0){
                 Join48(LW4,uno4,0,120);
             }else if(TT->nro==1){
@@ -363,7 +396,7 @@ void mostrar4(Tlista TT){
             }else if(TT->nro==15){
                 Join48(LW4,dieciseis4,0,120);
             }
-        }else if(pos==8){//Join49(laWea,nueve4,480,240);
+        }else if(pos==8){//Join49(imag,nueve4,480,240);
             if(TT->nro==0){
                 Join49(LW4,uno4,480,240);
             }else if(TT->nro==1){
@@ -397,7 +430,7 @@ void mostrar4(Tlista TT){
             }else if(TT->nro==15){
                 Join49(LW4,dieciseis4,480,240);
             }
-        }else if(pos==9){ //Join410(laWea,diez4,320,240);
+        }else if(pos==9){ //Join410(imag,diez4,320,240);
             if(TT->nro==0){
                 Join410(LW4,uno4,320,240);
             }else if(TT->nro==1){
@@ -432,7 +465,7 @@ void mostrar4(Tlista TT){
                 Join410(LW4,dieciseis4,320,240);
             }
 
-        }else if(pos==10){//Join411(laWea,once4,160,240);
+        }else if(pos==10){//Join411(imag,once4,160,240);
             if(TT->nro==0){
                 Join411(LW4,uno4,160,240);
             }else if(TT->nro==1){
@@ -466,7 +499,7 @@ void mostrar4(Tlista TT){
             }else if(TT->nro==15){
                 Join411(LW4,dieciseis4,160,240);
             }
-        }else if(pos==11){//Join412(laWea,doce4,0,240);
+        }else if(pos==11){//Join412(imag,doce4,0,240);
             if(TT->nro==0){
                 Join412(LW4,uno4,0,240);
             }else if(TT->nro==1){
@@ -500,7 +533,7 @@ void mostrar4(Tlista TT){
             }else if(TT->nro==15){
                 Join412(LW4,dieciseis4,0,240);
             }
-        }else if(pos==12){//Join413(laWea,cuatro4,480,0);
+        }else if(pos==12){//Join413(imag,cuatro4,480,0);
             if(TT->nro==0){
                 Join413(LW4,uno4,480,0);
             }else if(TT->nro==1){
@@ -534,7 +567,7 @@ void mostrar4(Tlista TT){
             }else if(TT->nro==15){
                 Join413(LW4,dieciseis4,480,0);
             }
-        }else if(pos==13){ //Join414(laWea,tres4,320,0);
+        }else if(pos==13){ //Join414(imag,tres4,320,0);
             if(TT->nro==0){
                 Join414(LW4,uno4,320,0);
             }else if(TT->nro==1){
@@ -569,7 +602,7 @@ void mostrar4(Tlista TT){
                 Join414(LW4,dieciseis4,320,0);
             }
 
-        }else if(pos==14){//Join415(laWea,dos4,160,0);
+        }else if(pos==14){//Join415(imag,dos4,160,0);
             if(TT->nro==0){
                 Join415(LW4,uno4,160,0);
             }else if(TT->nro==1){
@@ -603,7 +636,7 @@ void mostrar4(Tlista TT){
             }else if(TT->nro==15){
                 Join415(LW4,dieciseis4,160,0);
             }
-        }else if(pos==15){//Join416(laWea,uno4,0,0);
+        }else if(pos==15){//Join416(imag,uno4,0,0);
             if(TT->nro==0){
                 Join416(LW4,uno4,0,0);
             }else if(TT->nro==1){
@@ -647,7 +680,7 @@ void mostrar4(Tlista TT){
 
 /*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
-int sobreescribirIMG4(Mat laWea){
+int sobreescribirIMG4(Mat imag){
      uno4 = imread("miniatura16.jpg",1);
      dos4 = imread("miniatura15.jpg",1);
      tres4 = imread("miniatura14.jpg",1);
@@ -667,210 +700,219 @@ int sobreescribirIMG4(Mat laWea){
      catorce4 = imread("miniatura3.jpg",1);
      quince4 = imread("miniatura2.jpg",1);
     dieciseis4 = imread("miniatura1.jpg",1);
-    LW4=laWea;
-    int gen=0;
-    Poblacion M2=Muestra;
-    int fin=0;
-    while(M2->sgte->sgte!=NULL){
-        M2=M2->sgte;
-        M2=M2->sgte;
-        fin+=1;
+    LW4=imag;
+
+    int gen = 1;
+    Poblacion M2 = Muestra;
+    int fin = 0;
+    while (M2 != NULL) {
+        fin += 1;
+        M2 = M2->sgte;
     }
-    while(Muestra->sgte->sgte!=NULL){
-        if(gen==fin){
-            cout<<"FINALIZADO";
+    int cont = 0; //condicion para detenerse en el ultimo individuo con un wait infinito
+    int cont2 = 0; //sirve para mostrar el numero de generacion
+    while (Muestra != NULL) {
+        if (continuar4 != 0) {
+            revisar4(cont);
+        }
+
+        cout << "\n GENERACION :";
+        if (cont2 == 3) {
+            cont2 = 0;
+            gen += 1;
+        }
+        cont2 += 1;
+        cont += 1;
+        cout << gen;
+        cout << "\n";
+        if (salto_generaciones4 == 0) {
+            mostrar4(Muestra->individuo);
+            disminuir4 = 0;
+        }
+        if (disminuir4 == 1) {
+            salto_generaciones4 -= 1;
+        }
+        waitKey(tiempo4);
+        reportarLista(Muestra->individuo);
+        Muestra = Muestra->sgte;
+        if (cont == fin) {
+            cout << "FINALIZADO\n";
             waitKey(0);
         }
-        cout<<"GENERACION \n";
-        cout<<gen;
 
-        if(Muestra->sgte!=NULL){
-            mostrar4(Muestra->sgte->individuo);
-            waitKey(4000);
-        }
-
-        if(Muestra->sgte->sgte!=NULL){
-            mostrar4(Muestra->sgte->sgte->individuo);
-            waitKey(4000);
-        }
-        mostrar4(Muestra->individuo);
-        waitKey(4000);
-        Muestra=Muestra->sgte;
-        Muestra=Muestra->sgte;
-        gen+=1;
 
     }
 }
 
 /*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
-void cuatroporcuatro16(Mat laWea17){
+void cuatroporcuatro16(Mat imag17){
     for(int y=360 ; y<=480; y+=120){
         for(int x=480; x<=640; x+=160){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 16);
-            Mat miniatura = CropCuatroporcuatro(laWea17, x, y, 160, 120, nombre);
-            Join4(laWea17,miniatura,300,50);
-            sobreescribirIMG4(laWea17);
+            Mat miniatura = CropCuatroporcuatro(imag17, x, y, 160, 120, nombre);
+            Join4(imag17,miniatura,300,50);
+            sobreescribirIMG4(imag17);
         }
     }
 }
-void cuatroporcuatro15(Mat laWea16){
+void cuatroporcuatro15(Mat imag16){
     for(int y=360 ; y<=480; y+=120){
         for(int x=320; x<=640; x+=160){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 15);
-            Mat miniatura = CropCuatroporcuatro(laWea16, x, y, 160, 120, nombre);
-            cuatroporcuatro16(laWea16);
+            Mat miniatura = CropCuatroporcuatro(imag16, x, y, 160, 120, nombre);
+            cuatroporcuatro16(imag16);
         }
     }
 }
-void cuatroporcuatro14(Mat laWea15){
+void cuatroporcuatro14(Mat imag15){
     for(int y=360 ; y<=480; y+=120){
         for(int x=160; x<=640; x+=160){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 14);
-            Mat miniatura = CropCuatroporcuatro(laWea15, x, y, 160, 120, nombre);
-            cuatroporcuatro15(laWea15);
+            Mat miniatura = CropCuatroporcuatro(imag15, x, y, 160, 120, nombre);
+            cuatroporcuatro15(imag15);
         }
     }
 }
-void cuatroporcuatro13(Mat laWea14){
+void cuatroporcuatro13(Mat imag14){
     for(int y=360 ; y<=480; y+=120){
         for(int x=0; x<=640; x+=160){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 13);
-            Mat miniatura = CropCuatroporcuatro(laWea14, x, y, 160, 120, nombre);
-            cuatroporcuatro14(laWea14);
+            Mat miniatura = CropCuatroporcuatro(imag14, x, y, 160, 120, nombre);
+            cuatroporcuatro14(imag14);
         }
     }
 }
 
 /*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
-void cuatroporcuatro12(Mat laWea13){
+void cuatroporcuatro12(Mat imag13){
     for(int y=240 ; y<=480; y+=120){
         for(int x=480; x<=640; x+=160) {
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 12);
-            Mat miniatura = CropCuatroporcuatro(laWea13, x, y, 160, 120, nombre);
-            cuatroporcuatro13(laWea13);
+            Mat miniatura = CropCuatroporcuatro(imag13, x, y, 160, 120, nombre);
+            cuatroporcuatro13(imag13);
         }
     }
 }
-void cuatroporcuatro11(Mat laWea12){
+void cuatroporcuatro11(Mat imag12){
     for(int y=240 ; y<=480; y+=120){
         for(int x=320; x<=640; x+=160){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 11);
-            Mat miniatura = CropCuatroporcuatro(laWea12, x, y, 160, 120, nombre);
-            cuatroporcuatro12(laWea12);
+            Mat miniatura = CropCuatroporcuatro(imag12, x, y, 160, 120, nombre);
+            cuatroporcuatro12(imag12);
         }
     }
 }
-void cuatroporcuatro10(Mat laWea11){
+void cuatroporcuatro10(Mat imag11){
     for(int y=240 ; y<=480; y+=120){
         for(int x=160; x<=640; x+=160){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 10);
-            Mat miniatura = CropCuatroporcuatro(laWea11, x, y, 160, 120, nombre);
-            cuatroporcuatro11(laWea11);
+            Mat miniatura = CropCuatroporcuatro(imag11, x, y, 160, 120, nombre);
+            cuatroporcuatro11(imag11);
         }
     }
 }
-void cuatroporcuatro9(Mat laWea10){
+void cuatroporcuatro9(Mat imag10){
     for(int y=240 ; y<=480; y+=120){
         for(int x=0; x<=640; x+=160){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 9);
-            Mat miniatura = CropCuatroporcuatro(laWea10, x, y, 160, 120, nombre);
-            cuatroporcuatro10(laWea10);
+            Mat miniatura = CropCuatroporcuatro(imag10, x, y, 160, 120, nombre);
+            cuatroporcuatro10(imag10);
         }
     }
 }
 
 /*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
-void cuatroporcuatro8(Mat laWea9){
+void cuatroporcuatro8(Mat imag9){
     for(int y=120 ; y<=480; y+=120){
         for(int x=480; x<=640; x+=160){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 8);
-            Mat miniatura = CropCuatroporcuatro(laWea9, x, y, 160, 120, nombre);
-            cuatroporcuatro9(laWea9);
+            Mat miniatura = CropCuatroporcuatro(imag9, x, y, 160, 120, nombre);
+            cuatroporcuatro9(imag9);
         }
     }
 }
-void cuatroporcuatro7(Mat laWea8){
+void cuatroporcuatro7(Mat imag8){
     for(int y=120 ; y<=480; y+=120){
         for(int x=320; x<=640; x+=160) {
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 7);
-            Mat miniatura = CropCuatroporcuatro(laWea8, x, y, 160, 120, nombre);
-            cuatroporcuatro8(laWea8);
+            Mat miniatura = CropCuatroporcuatro(imag8, x, y, 160, 120, nombre);
+            cuatroporcuatro8(imag8);
         }
     }
 }
-void cuatroporcuatro6(Mat laWea7){
+void cuatroporcuatro6(Mat imag7){
     for(int y=120 ; y<=480; y+=120){
         for(int x=160; x<=640; x+=160){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 6);
-            Mat miniatura = CropCuatroporcuatro(laWea7, x, y, 160, 120, nombre);
-            cuatroporcuatro7(laWea7);
+            Mat miniatura = CropCuatroporcuatro(imag7, x, y, 160, 120, nombre);
+            cuatroporcuatro7(imag7);
         }
     }
 }
-void cuatroporcuatro5(Mat laWea6){
+void cuatroporcuatro5(Mat imag6){
     for(int y=120 ; y<=480; y+=120){
         for(int x=0; x<=640; x+=160){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 5);
-            Mat miniatura = CropCuatroporcuatro(laWea6, x, y, 160, 120, nombre);
-            cuatroporcuatro6(laWea6);
+            Mat miniatura = CropCuatroporcuatro(imag6, x, y, 160, 120, nombre);
+            cuatroporcuatro6(imag6);
         }
     }
 }
 
 /*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
-void cuatroporcuatro4(Mat laWea5){
+void cuatroporcuatro4(Mat imag5){
     for(int y=0 ; y<=480; y+=120){
         for(int x=480; x<=640; x+=160){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 4);
-            Mat miniatura = CropCuatroporcuatro(laWea5, x, y, 160, 120, nombre);
-            cuatroporcuatro5(laWea5);
+            Mat miniatura = CropCuatroporcuatro(imag5, x, y, 160, 120, nombre);
+            cuatroporcuatro5(imag5);
         }
     }
 }
-void cuatroporcuatro3(Mat laWea4){
+void cuatroporcuatro3(Mat imag4){
     for(int y=0 ; y<=480; y+=120){
         for(int x=320; x<=640; x+=160){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 3);
-            Mat miniatura = CropCuatroporcuatro(laWea4, x, y, 160, 120, nombre);
-            cuatroporcuatro4(laWea4);
+            Mat miniatura = CropCuatroporcuatro(imag4, x, y, 160, 120, nombre);
+            cuatroporcuatro4(imag4);
         }
     }
 }
-void cuatroporcuatro2(Mat laWea3){
+void cuatroporcuatro2(Mat imag3){
     for(int y=0 ; y<=480; y+=120){
         for(int x=160; x<=640; x+=160) {
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 2);
-            Mat miniatura = CropCuatroporcuatro(laWea3, x, y, 160, 120, nombre);
-            cuatroporcuatro3(laWea3);
+            Mat miniatura = CropCuatroporcuatro(imag3, x, y, 160, 120, nombre);
+            cuatroporcuatro3(imag3);
         }
     }
 }
-void cuatroporcuatro1(Mat laWea2){
+void cuatroporcuatro1(Mat imag2){
     for(int y=0 ; y<=480; y+=120){
         for(int x=0; x<=640; x+=160){
             char nombre[50];
             sprintf(nombre, "miniatura%d.jpg", 1);
-            Mat miniatura = CropCuatroporcuatro(laWea2, x, y, 160, 120, nombre);
-            cuatroporcuatro2(laWea2);
+            Mat miniatura = CropCuatroporcuatro(imag2, x, y, 160, 120, nombre);
+            cuatroporcuatro2(imag2);
         }
     }
 }
